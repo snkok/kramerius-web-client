@@ -14,6 +14,19 @@ var APP_GLOBAL = {
   },
   krameriusList: [
     {
+      title: 'Slovenská národná knižnica',
+      code: 'snk',
+      logo: 'http://www.snk.sk/images/websnk-vlavo-180x115.png',
+      url: 'http://localhost:8080',
+      richCollections: true,
+      joinedDoctypes: true,
+      lemmatization: false,
+      iiif: true,
+      doctypes: ['monograph', 'periodical', 'map', 'graphic', 'archive', 'manuscript', 'soundrecording', 'sheetmusic'],
+      filters: ['accessibility', 'doctypes', 'authors', 'keywords', 'geonames', 'collections', 'locations', 'languages']
+    },
+
+    {
       title: 'Moravská zemská knihovna',
       code: 'mzk',
       logo: 'https://registr.digitalniknihovna.cz/libraries/mzk/logo',
