@@ -1,7 +1,7 @@
 import { KrameriusInfoService } from './kramerius-info.service';
 import { CollectionService } from './collection.service';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import {environment} from "../../environments/environment";
 
 declare var APP_GLOBAL: any;
 
@@ -80,7 +80,7 @@ export class AppSettings {
     this.collectionsService.clear();
     this.code = kramerius.code;
     this.title = kramerius.title;
-    this.url = kramerius.url;
+    this.url = environment.url;
     this.logo = kramerius.logo;
     this.logoHome = kramerius.logoHome || this.logo;
     this.richCollections = kramerius.richCollections;

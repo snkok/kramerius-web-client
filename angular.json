@@ -31,6 +31,22 @@
             ]
           },
           "configurations": {
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ]
+            },
+            "test": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.test.ts"
+                }
+              ]
+            },
             "production": {
               "optimization": true,
               "outputHashing": "all",
@@ -56,6 +72,12 @@
             "browserTarget": "kramerius-client:build"
           },
           "configurations": {
+            "dev": {
+              "browserTarget": "kramerius-client:build:dev"
+            },
+            "test": {
+              "browserTarget": "kramerius-client:build:test"
+            },
             "production": {
               "browserTarget": "kramerius-client:build:production"
             }
