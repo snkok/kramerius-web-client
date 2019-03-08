@@ -1,5 +1,6 @@
 import { CollectionService } from './collection.service';
 import { Injectable } from '@angular/core';
+import {environment} from "../../environments/environment";
 
 declare var APP_GLOBAL: any;
 
@@ -71,7 +72,7 @@ export class AppSettings {
     this.collectionsService.clear();
     this.code = kramerius.code;
     this.title = kramerius.title;
-    this.url = kramerius.url;
+    this.url = environment.url;
     this.logo = kramerius.logo;
     this.richCollections = kramerius.richCollections;
     this.joinedDoctypes = kramerius.joinedDoctypes;
