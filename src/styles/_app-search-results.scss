@@ -5,7 +5,7 @@ app-search-results {
   height: calc(100% - #{$app-toolbar-height});
   overflow: auto;
   padding: 0.5rem;
-  background-color: $app-grey-l-4;
+  background-color: $snk-vanilla;
   
   &.app-search-results-no-toolbar {
     height: 100%;

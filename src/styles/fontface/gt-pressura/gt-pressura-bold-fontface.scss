@@ -1,0 +1,9 @@
+@import "../../app-variables";
+
+@font-face {
+  font-family: "GT-Pressura-Bold";
+  font-weight: 700;
+  font-style: normal;
+
+  src: url($roboto-font-path + "GT-Pressura/GT-Pressura-Bold.otf");
+}

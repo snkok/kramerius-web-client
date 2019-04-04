@@ -5,6 +5,7 @@ app-browse-results {
   height: calc(100% - #{$app-toolbar-height});
   overflow: auto;
   padding: 1rem 0;
+  background-color: $snk-vanilla;
   
   /*@media #{$small-and-down} {
     &.app-panel-mobile-open {

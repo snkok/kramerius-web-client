@@ -30,18 +30,20 @@ $app-grey-c-1:              color("custom", "grey-l-1") !default; // ebebeb -> t
 
 $app-red:                   color("red", "accent-4") !default; // d50000 -> remove color
 $app-orange:                color("orange", "accent-2") !default; // ffab40 -> count of periodica color
-$app-white:                 color("shades", "white") ! default;
-$app-black:                 color("shades", "black") ! default;
+$app-white:                 color("shades", "white") !default;
+$app-black:                 color("shades", "black") !default;
+$snk-yellow:                color("custom", "snk-yellow") !default;
+$snk-vanilla:                color("custom", "snk-vanilla") !default;
 
 // type of document
-$app-type-monograph:        color("pink", "lighten-1") !default; // ec407a -> knihy
-$app-type-map:              color("lime", "darken-1") !default; // c0ca33 -> mapy
-$app-type-periodical:       color("green", "lighten-1") !default; // 66bb6a -> noviny a casopisy
-$app-type-graphic:          color("red", "lighten-1") !default; // ef5350 -> grafiky
-$app-type-soundrecording:   color("orange", "accent-2") !default; // ffab40 -> audio
-$app-type-archive:          color("teal", "accent-4") !default; // 00bfa5 -> archivalie
-$app-type-sheetmusic:       color("deep-purple", "lighten-2") !default; // 9575cd -> hudebniny
-$app-type-manuscript:       color("blue-grey", "lighten-1") !default; // 78909c -> rukopisy
+$app-type-monograph:        color("custom", "snk-mono") !default; // ffc208 -> knihy
+$app-type-map:              color("custom", "snk-map") !default; // 9ac32b -> mapy
+$app-type-periodical:       color("custom", "snk-period") !default; // 96c8ec -> noviny a casopisy
+$app-type-graphic:          color("custom", "snk-graphic") !default; // 80232a -> grafiky
+$app-type-soundrecording:   color("custom", "snk-soundrecording") !default; // a5a397 -> audio
+$app-type-archive:          color("custom", "snk-archive") !default; // 2ea87c -> archivalie
+$app-type-sheetmusic:       color("custom", "snk-sheetmusic") !default; // 4b267a -> hudebniny
+$app-type-manuscript:       color("custom", "snk-manuscript") !default; // e73331 -> rukopisy
 $app-type-article: #4a84fd !default;
 $app-type-page: #8B4513 !default;
 
@@ -52,12 +54,14 @@ $app-border-radius-sidebar: 4px !default;
 
 // search bar
 $app-search-bar-height:     44px !default;
+$app-home-search-bar-height:     35px !default;
 
 // fulltext search bar
 $app-fulltext-search-bar-height: 47px !default;
 
 // layout
 $app-side-col-width:        300px !default;
+$app-home-side-col-width:        400px !default;
 
 // logo
 $app-mobile-logo-width:     115px !default;
@@ -97,6 +101,7 @@ $small-350-screen: 350px !default;
 $small-300-screen: 300px !default;
 $small-200-screen: 200px !default;
 
+$snk-default-page-width: 980px !default;
 
 $medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
 $large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
@@ -105,6 +110,8 @@ $small-and-down: "only screen and (max-width : #{$small-screen})" !default;
 $medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
 $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
 $large-only: "only screen and (max-width : #{$large-screen}) and (min-width : #{$medium-screen})" !default;
+$snk-default-and-down: "only screen and (max-width : #{$snk-default-page-width})" !default;
+$snk-default-and-up: "only screen and (min-width : #{$snk-default-page-width})" !default;
 
 $small-800-and-down: "only screen and (max-width : #{$small-800-screen})" !default;
 $small-500-and-down: "only screen and (max-width : #{$small-500-screen})" !default;

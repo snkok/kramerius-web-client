@@ -37,6 +37,9 @@ export class ViewerControlsService {
         document.addEventListener('webkitfullscreenchange', () => ctx.onFullscreenChanged());
         document.addEventListener('mozfullscreenchange', () => ctx.onFullscreenChanged());
         document.addEventListener('MSFullscreenChange', () => ctx.onFullscreenChanged());
+
+        window.addEventListener('orientationchange', () => ctx.onOrientationChanged());
+        window.addEventListener('resize', () => ctx.onOrientationChanged());
     }
 
     clear() {
@@ -110,14 +113,20 @@ export class ViewerControlsService {
     }
 
     onFullscreenChanged() {
-        console.log('onFullscreenchanged');
+        // console.log('onFullscreenchanged');
         this.fitToScreen();
         setTimeout(() => {
             this.fitToScreen();
         }, 200);
     }
 
-
+    onOrientationChanged() {
+        // console.log('onOrientationChanged');
+        this.fitToScreen();
+        setTimeout(() => {
+            this.fitToScreen();
+        }, 600);
+    }
 
     hideLeftPanel() {
         this.leftPanelVisible = false;

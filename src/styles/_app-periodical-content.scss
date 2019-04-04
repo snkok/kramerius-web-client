@@ -16,7 +16,7 @@ app-periodical-content {
     app-periodical-calendar-layout {
       height: calc( 100% - #{$app-toolbar-height});
       display: block;
-      background-color: $app-grey-l-4;
+      background-color: $snk-vanilla;
     }
     
     @import "styles/app-periodical-toolbar";

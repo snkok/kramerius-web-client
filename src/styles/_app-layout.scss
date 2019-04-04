@@ -43,7 +43,7 @@ app-root {
       .app-content-wrapper {
         flex: 1;
         height: 100%;
-        overflow: auto;
+        overflow: inherit;
         
         @import "styles/app-home";
       }
@@ -96,7 +96,7 @@ app-root {
       overflow: auto;
       display: block;
       height: 100%;
-      background-color: $app-grey-l-4;
+      background-color: $snk-vanilla;
       .app-collections-wrapper {
         padding: 1rem 0.5rem 0.5rem;
         @media (min-width: 1200px) {

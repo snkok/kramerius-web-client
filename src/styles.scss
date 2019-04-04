@@ -9,6 +9,7 @@
 @import "../node_modules/mdi/scss/materialdesignicons.scss";
 
 @import "styles/fontface/roboto-condensed/roboto-condensed-fontface";
+@import "styles/fontface/gt-pressura/gt-pressura-fontface";
 
 @import "styles/app-mixins";
 @import "styles/app-mdi";
@@ -16,6 +17,7 @@
 @import "styles/app-layout";
 @import "styles/app-global";
 @import "styles/app-navbar";
+@import "styles/app-home-navbar";
 @import "styles/app-logo";
 @import "styles/app-home-logo";
 @import "styles/app-search-bar";
@@ -32,3 +34,70 @@
 @import "styles/app-dialog-sheetmusic-warning";
 @import "styles/app-page-not-found";
 @import "styles/app-login";
+
+body {
+  background-color: $snk-vanilla;
+}
+
+.owl-carousel-container {
+  background-color: $snk-vanilla;
+
+  max-width: 100%;
+  width: 85%;
+
+  @media #{$snk-default-and-up} {
+    max-width: 980px;
+  }
+
+}
+
+app-owl-carousel {
+  .owl-theme .owl-dots .owl-dot span {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0 3px;
+    background: #000000;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity 200ms ease;
+    border-radius: 30px;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: $snk-yellow;
+  }
+
+  .owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 10px;
+  }
+
+  youtube-player > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+app-root {
+  img.header-icon-1 {
+    max-width: 85%;
+
+    @media #{$extra-large-and-up} {
+      max-width: 980px;
+    }
+
+    height: auto;
+  }
+
+  .header-icon-div {
+    background-color: $snk-yellow;
+  }
+
+  .header-icon-div > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

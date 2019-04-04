@@ -14,6 +14,7 @@ export class AboutComponent implements OnInit {
   data = '';
   dataCs = '';
   dataEn = '';
+  dataSk = '';
   loading: boolean;
 
   constructor(private http: HttpClient, private translator: Translator, private appSettings: AppSettings, private router: Router) {
@@ -24,18 +25,19 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     this.loading = true;
-    this.translator.languageChanged.subscribe(() => {
+    /*this.translator.languageChanged.subscribe(() => {
       this.localeChanged();
-    });
-    const reqCs = this.http.get(this.appSettings.aboutPage['cs'], { observe: 'response', responseType: 'text' })
+    });*/
+    const reqSk = this.http.get(this.appSettings.aboutPage['sk'], { observe: 'response', responseType: 'text' })
     .map(response => response['body']);
-    const reqEn = this.http.get(this.appSettings.aboutPage['en'], { observe: 'response', responseType: 'text' })
-    .map(response => response['body']);
-    forkJoin([reqCs, reqEn])
+    // const reqEn = this.http.get(this.appSettings.aboutPage['en'], { observe: 'response', responseType: 'text' })
+    // .map(response => response['body']);
+    forkJoin([reqSk])
     .subscribe( result => {
-      this.dataCs = result[0];
-      this.dataEn = result[1];
-      this.localeChanged();
+      this.dataSk = result[0];
+      // this.dataEn = result[1];
+      // this.localeChanged();
+      this.data = this.dataSk;
       this.loading = false;
     },
     error => {
@@ -43,12 +45,12 @@ export class AboutComponent implements OnInit {
     });
   }
 
-  private localeChanged() {
+ /* private localeChanged() {
     if (this.translator.language === 'cs') {
       this.data = this.dataCs;
     } else {
       this.data = this.dataEn;
     }
-  }
+  }*/
 
 }

@@ -82,7 +82,7 @@ export class CitationService {
     if (metadata.hasIdentifier('isbn')) {
       c += 'ISBN ' + metadata.identifiers['isbn'] + '. ';
     }
-    c += 'Dostupné také z: ' + link;
+    c += 'Dostupné tiež z: ' + link;
     return c;
   }
 

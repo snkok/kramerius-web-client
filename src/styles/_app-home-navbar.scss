@@ -1,15 +1,33 @@
 // --- NAVBAR ---
 
-app-navbar {
+app-home-navbar {
+
+  .first-menu-item > li > a{
+    padding-left: 0;
+  }
+
+  nav ul a {
+    font-size: 17px;
+    font-weight: bold;
+  }
+
   nav {
     position: relative;
     z-index: 995;
-    background-color: $app-grey-l-5;
-    @include set-border(bottom, 1, solid, $app-grey-c-1);
+    background-color: black;
     box-shadow: 0 2px 2px 0 rgba(38, 50, 56, 0), 0 1px 5px 0 rgba(38, 50, 56, 0.12), 0 3px 1px -20px rgba(38, 50, 56, 0.1);
+    height: 30px;
+    line-height: 30px;
 
     .nav-wrapper {
-      background-color: $snk-yellow;
+
+      width: 85%;
+      margin: 0 auto;
+
+      @media #{$extra-large-and-up} {
+        width: 980px;
+        margin: 0 auto;
+      }
 
       .app-arrow-left {
         color: $app-grey;
@@ -29,8 +47,7 @@ app-navbar {
         float: left;
 
         &.app-col-left {
-          width: $app-side-col-width;
-          padding-left: 15px;
+          width: $app-home-side-col-width;
 
           //mq
           @media #{$small-and-down} {
@@ -84,10 +101,6 @@ app-navbar {
         }
       }
     }
-
-    ul a {
-      color: #000000;
-    }
   }
 
   // btn side nav
@@ -111,8 +124,19 @@ app-navbar {
       font-size: 1.4rem;
     }
   }
-}
 
-#sidenav-overlay {
-  z-index: 1005;
+  #sidenav-overlay {
+    z-index: 1005;
+  }
+
+  nav ul {
+    a {
+      color: white;
+    }
+
+    a:hover{
+      color: $snk-yellow;
+    }
+  }
+
 }

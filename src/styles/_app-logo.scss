@@ -1,7 +1,13 @@
 // --- LOGO ---
 
 app-logo {
+
+  @media #{$small-and-down} {
+    display: none;
+  }
+
   .brand-logo {
+    max-width: 250px;
     font-size: inherit;
     position: inherit;
     display: table;
@@ -18,7 +24,9 @@ app-logo {
       vertical-align: middle;
 
       img {
-        height: 34px;
+        vertical-align: middle;
+        max-width: $app-side-col-width - 65px;
+        height: auto;
       }
     }
 

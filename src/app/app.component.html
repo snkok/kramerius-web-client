@@ -1,6 +1,11 @@
-<header>
-  <app-navbar></app-navbar>
-</header>
+<!--<header>-->
+
+<!--</header>-->
 <main>
+  <div *ngIf="state.atHome()" class="header-icon-div">
+    <img src="../assets/img/snk-img1.png" class="header-icon-1" alt="{{'navbar.home' | translate }}" />
+  </div>
+  <app-navbar *ngIf="!state.atHome()"></app-navbar>
+  <app-home-navbar *ngIf="state.atHome()"></app-home-navbar>
   <router-outlet></router-outlet>
 </main>

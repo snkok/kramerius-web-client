@@ -115,6 +115,10 @@ import { AnalyticsService } from './services/analytics.service';
 import { DatepickerModule } from './datepicker';
 import { HomeFooterComponent } from './home/home-footer/home-footer.component';
 import { KrameriusInfoService } from './services/kramerius-info.service';
+import {OwlModule} from 'ngx-owl-carousel';
+import { OwlCarouselComponent } from './home/owl-carousel/owl-carousel.component';
+import { HomeNavbarComponent } from './home/home-navbar/home-navbar.component';
+import {NgxYoutubePlayerModule} from 'ngx-youtube-player';
 
 @NgModule({
   declarations: [
@@ -188,7 +192,9 @@ import { KrameriusInfoService } from './services/kramerius-info.service';
     UpcasePipe,
     LoginComponent,
     AboutComponent,
-    HomeFooterComponent
+    HomeFooterComponent,
+    OwlCarouselComponent,
+    HomeNavbarComponent
   ],
   entryComponents: [
     DialogOcrComponent,
@@ -209,9 +215,10 @@ import { KrameriusInfoService } from './services/kramerius-info.service';
     LazyLoadImageModule,
     AppRoutingModule,
     NgxGalleryModule,
+    OwlModule,
     TranslatorModule.forRoot({
-      providedLanguages: ['en', 'cs'],
-      defaultLanguage: 'cs'
+      providedLanguages: ['en', 'sk'],
+      defaultLanguage: 'sk'
     }),
     MzButtonModule,
     MzInputModule,
@@ -231,7 +238,8 @@ import { KrameriusInfoService } from './services/kramerius-info.service';
     MzDropdownModule,
     MzCheckboxModule,
     MzDatepickerModule,
-    ClipboardModule
+    ClipboardModule,
+    NgxYoutubePlayerModule.forRoot()
   ],
   providers: [
     AppState,

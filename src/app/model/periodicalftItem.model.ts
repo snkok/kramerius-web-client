@@ -28,7 +28,7 @@ export class PeriodicalFtItem {
             return this.path;
         }
         if (this.type === 'page' || this.type === 'monograph_unit_page') {
-            const uuid = this.context['article'] || this.context['monographunit'] || this.context['periodicalitem']  || this.context['supplement'] || this.context['periodicalvolume'];
+            const uuid = /*this.context['article'] ||*/ this.context['monographunit'] || this.context['periodicalitem']  || this.context['supplement'] || this.context['periodicalvolume'];
             this.path = 'view/' + uuid;
         } else if (this.type === 'article') {
             const uuid = this.context['periodicalitem'] || this.context['periodicalvolume'];

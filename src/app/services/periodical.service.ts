@@ -240,7 +240,23 @@ export class PeriodicalService {
   }
 
   private assignItems(items: PeriodicalItem[]) {
-    this.items = items;
+    this.items = items.sort((i1, i2) => {
+
+      const sub1 = i1.subtitle.split('-')[0];
+      const sub2 = i2.subtitle.split('-')[0];
+
+      const num1 = Number(sub1) || 1000000;
+      const num2 = Number(sub2) || 1000000;
+      if (num1 > num2) {
+        return 1;
+      }
+
+      if (num1 < num2) {
+        return -1;
+      }
+
+      return 0;
+    });
     if (this.isPeriodical()) {
       this.orderingType = 'periodical';
       if (this.volumesReverseOrder) {

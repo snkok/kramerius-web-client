@@ -20,14 +20,17 @@
               "src/assets",
               "src/favicon.ico"
             ],
-            "styles": [
-              "src/styles.scss",
-              "node_modules/font-awesome/css/font-awesome.css"
-            ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/materialize-css/dist/js/materialize.min.js",
-              "src/assets/js/ol-custom.js"
+              "src/assets/js/ol-custom.js",
+              "node_modules/owl.carousel/dist/owl.carousel.js"
+            ],
+            "styles": [
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/owl.carousel/dist/assets/owl.carousel.css",
+              "node_modules/owl.carousel/dist/assets/owl.theme.default.css",
+              "src/styles.scss"
             ]
           },
           "configurations": {
@@ -99,11 +102,14 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/materialize-css/dist/js/materialize.min.js",
-              "src/assets/js/ol-custom.js"
+              "src/assets/js/ol-custom.js",
+              "node_modules/owl.carousel/dist/owl.carousel.js"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/font-awesome/css/font-awesome.css"
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/owl.carousel/dist/assets/owl.carousel.css",
+              "node_modules/owl.carousel/dist/assets/owl.theme.default.css",
+              "src/styles.scss"
             ],
             "assets": [
               "src/assets",

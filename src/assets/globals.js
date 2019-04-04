@@ -1,7 +1,8 @@
 var APP_GLOBAL = {
-  share_url: "http://localhost:4200/${KRAMERIUS}/uuid/${UUID}",
-  ga: 'UA-65303593-14',
-  enablePeriodicalVolumesYearsLayout: true, 
+//  share_url: "http://localhost:4200/${KRAMERIUS}/uuid/${UUID}",
+  share_url: "https://onlinekniznica.snk.sk/uuid/${UUID}",
+  ga: 'UA-11111111-14',
+  enablePeriodicalVolumesYearsLayout: true,
   enablePeriodicalIsssuesCalendarLayout: true,
   defaultPeriodicalVolumesLayout: "years", // grid | years
   defaultPeriodicalIssuesLayout: "calendar", // grid | calendar
@@ -10,7 +11,8 @@ var APP_GLOBAL = {
   bigHomeLogo: false,
   aboutPage: {
     cs: '/assets/pages/about.cs.html',
-    en: '/assets/pages/about.cs.html',
+    en: '/assets/pages/about.en.html',
+    sk: '/assets/pages/about.sk.html',
   },
   krameriusList: [
     {
@@ -24,6 +26,5 @@ var APP_GLOBAL = {
       doctypes: ['monograph', 'periodical', 'map', 'graphic', 'archive', 'manuscript', 'soundrecording', 'sheetmusic'],
       filters: ['accessibility', 'doctypes', 'authors', 'keywords', 'geonames', 'collections', 'locations', 'languages']
     }
-  ] 
-
+  ]
 };

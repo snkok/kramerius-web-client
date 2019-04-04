@@ -1,0 +1,36 @@
+<owl-carousel #owlElement [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'sliding', 'owl-carousel']">
+  <div class="item" style="position: relative;
+                              padding-bottom: 56.25%; /* 16:9 */
+                              height: 0;">
+    <div style="position: relative;
+                              padding-bottom: 56.25%; /* 16:9 */
+                              height: 0;">
+      <youtube-player
+        [videoId]="video1Id"
+        [width]="videoWidth"
+        [height]="videoHeight"
+        (ready)="savePlayer1($event)"
+        (change)="onVideo1StateChange($event)">
+      </youtube-player>
+    </div>
+  </div>
+  <div class="item" style="position: relative;
+                              padding-bottom: 56.25%; /* 16:9 */
+                              height: 0;">
+    <div style="position: relative;
+                              padding-bottom: 56.25%; /* 16:9 */
+                              height: 0;">
+      <youtube-player
+        [videoId]="video2Id"
+        [width]="videoWidth"
+        [height]="videoHeight"
+        (ready)="savePlayer2($event)"
+        (change)="onVideo2StateChange($event)">
+      </youtube-player>
+    </div>
+  </div>
+
+  <div class="item" *ngFor="let image of images;let i= index">
+    <img class="slide-image" src="{{image.image}}" width="100%">
+  </div>
+</owl-carousel>

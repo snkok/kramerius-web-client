@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  url: ''
+  url: 'https://onlinekniznica.snk.sk'
 };

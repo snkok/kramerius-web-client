@@ -1,7 +1,7 @@
 import { KrameriusInfoService } from './kramerius-info.service';
 import { CollectionService } from './collection.service';
 import { Injectable } from '@angular/core';
-import {environment} from "../../environments/environment";
+import {environment} from '../../environments/environment';
 
 declare var APP_GLOBAL: any;
 

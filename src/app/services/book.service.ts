@@ -200,12 +200,29 @@ export class BookService {
 
     private loadIssues(periodicalUuid: string, volumeUuid: string, issueUuid: string) {
         this.krameriusApiService.getPeriodicalIssues(periodicalUuid, volumeUuid, null).subscribe(response => {
-            const issues = this.solrService.periodicalItems(response, 'periodicalitem');
-            if (!issues || issues.length < 1) {
+            const issuesBeforeSort = this.solrService.periodicalItems(response, 'periodicalitem');
+            if (!issuesBeforeSort || issuesBeforeSort.length < 1) {
                 return;
             }
+            const issues = issuesBeforeSort.sort((i1, i2) => {
+
+              const sub1 = i1.subtitle.split('-')[0];
+              const sub2 = i2.subtitle.split('-')[0];
+
+              const num1 = Number(sub1) || 1000000;
+              const num2 = Number(sub2) || 1000000;
+              if (num1 > num2) {
+                return 1;
+              }
+
+              if (num1 < num2) {
+                return -1;
+              }
+
+              return 0;
+            });
             let index = -1;
-            for (let i = 0; i < issues.length; i++) {
+          for (let i = 0; i < issues.length; i++) {
                 if (issues[i].uuid === issueUuid) {
                     index = i;
                     break;
