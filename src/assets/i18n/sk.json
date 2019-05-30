@@ -34,7 +34,8 @@
     "back": "Späť na predchádzajúcu stránku",
     "home": "Domovská stránka",
     "checkbox_label": "iba verejné",
-    "main_navigation": "Hlavné menu"
+    "main_navigation": "Hlavné menu",
+    "registration": "Registrácia"
   },
   "searchbar": {
     "library": "Hľadať v digitálnej knižnici ...",
@@ -887,5 +888,32 @@
     "wdc" : "Drevorezbár",
     "wde" : "Drevorytec",
     "wit" : "Svedok"
+  },
+  "registration":{
+    "title": "Registrácia čitateľa SNK",
+    "name": "Meno",
+    "email": "Email",
+    "password": "Heslo",
+    "confirmPassword": "Potvrdit heslo",
+    "emailLabel": "E-mailová adresu",
+    "nameError": "Prihlasovacie meno nesmie byť prázdne.",
+    "emailError": "Nesprávny formát",
+    "passwordError": "Musí obsahovať písmeno aj číslo. Minimálne je 6 znakov.",
+    "confirmPasswordError": "Heslo nie je rovnaké",
+    "button": "Registrácia",
+    "titleLabel": "Titul",
+    "surname": "Priezvisko",
+    "address": "Adresa",
+    "addressLabel": "Ulica, č.p.",
+    "postcode": "PSČ",
+    "city": "Mesto",
+    "telNumber": "Kontakt",
+    "telNumberLabel": "telefón / mobil",
+    "birthdate": "Dátum narodenia",
+    "note": "Poznámka",
+    "mandatory": "Toto pole je povinné.",
+    "agreement": "Súhlas so spracovaním osobných údajov",
+    "failure": "Registrácia bola neúspešná",
+    "success": "Registrácia bola úspešná"
   }
 }

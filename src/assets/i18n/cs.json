@@ -34,7 +34,8 @@
     "back": "Zpět na předchozí stránku",
     "home": "Domovská stránka",
     "checkbox_label": "pouze veřejné",
-    "main_navigation": "Hlavní navigace"
+    "main_navigation": "Hlavní navigace",
+    "registration": "Registrace"
   },
   "searchbar": {
     "library": "Hledat v digitální knihovně ...",
@@ -906,5 +907,35 @@
     "wdc" : "Dřevořezbář",
     "wde" : "Dřevorytec",
     "wit" : "Svědek"
+  },
+
+  "registration":{
+    "title": "Zaregistruj se",
+    "name": "Jméno",
+    "email": "E-mailová adresa",
+    "password": "Heslo",
+    "confirmPassword": "Potvrdit heslo",
+    "nameLabel": "Zadejte uživatelské jméno",
+    "emailLabel": "Zadajte E-mailovú adresu",
+    "passwordLabel": "Zadajte heslo",
+    "nameError": "Přihlašovací jméno nesmí být prázdné",
+    "emailError": "Nesprávny formát",
+    "passwordError": "Heslo nesmí být prázdné",
+    "confirmPasswordError": "Heslo není stejné",
+    "button": "Registrace",
+    "titleLabel": "Titul",
+    "surname": "Příjmení",
+    "address": "Adresa",
+    "addressLabel": "Ulice, č.p.",
+    "postcode": "PSČ",
+    "city": "Město",
+    "telNumber": "Kontakt",
+    "telNumberLabel": "Telefón / Mobil",
+    "birthdate": "Datum narození",
+    "note": "Poznámka",
+    "mandatory": "Toto pole je povinné.",
+    "agreement": "Souhlas se zpracováním osobních údajů",
+    "failure": "Registrace byla neúspěšná",
+    "success": "Registrace byla úspěšná"
   }
 }

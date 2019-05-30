@@ -13,11 +13,13 @@ import { RoutingGuardService } from './guards/routing.guard';
 import { RoutingPrefixGuardService } from './guards/routing-prefix.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
+import {RegistrationComponent} from "./registration/registration.component";
 
 const ROUTES: Routes = [
     { path: '404', component: NotFoundComponent},
     { path: '', component: HomeComponent, canActivate: [ RoutingGuardService ] },
     { path: 'about', component: AboutComponent, canActivate: [ RoutingGuardService ] },
+    { path: 'registration', component: RegistrationComponent, canActivate: [ RoutingGuardService ] },
     { path: 'login', component: LoginComponent, canActivate: [ RoutingGuardService ] },
     { path: 'browse', component: BrowseComponent, canActivate: [ RoutingGuardService ] },
     { path: 'search', component: SearchComponent, canActivate: [ RoutingGuardService ] },

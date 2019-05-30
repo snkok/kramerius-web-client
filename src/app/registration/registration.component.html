@@ -1,0 +1,174 @@
+<div class="app-login-wrapper title-padding">
+
+  <div class="title">{{'registration.title' | translate}}</div>
+
+  <div *ngIf="successRegistration == false" class="app-error register-message">{{"registration.failure" | translate}}</div>
+  <div *ngIf="successRegistration == true" class="register-message">{{"registration.success" | translate}}</div>
+
+  <form [formGroup]="registrationForm" (ngSubmit)="registration()" novalidate>
+
+    <mz-input-container class="left-field">
+      <input mz-input
+             formControlName="title"
+             [label]="'registration.titleLabel' | translate"
+             [validate]="false"
+             [required]="false"
+             [placeholder]="'registration.titleLabel' | translate"
+             type="text">
+    </mz-input-container>
+
+    <mz-input-container class="right-filed">
+      <input mz-input
+             [label]="('registration.name' | translate) + ': *'"
+             formControlName="name"
+             [validate]="true"
+             [required]="true"
+             [dataError]="'registration.mandatory' | translate"
+             pattern="^(?!\s*$|\s).*$"
+             [placeholder]="'registration.name' | translate"
+             type="text">
+    </mz-input-container>
+
+    <mz-input-container class="left-field">
+      <input mz-input
+             [label]="('registration.surname' | translate) + ': *'"
+             formControlName="surname"
+             [validate]="true"
+             [required]="true"
+             [dataError]="'registration.mandatory' | translate"
+             pattern="^(?!\s*$|\s).*$"
+             [placeholder]="'registration.surname' | translate"
+             type="text">
+    </mz-input-container>
+
+    <mz-input-container class="right-filed">
+      <input mz-input
+             [label]="('registration.city' | translate) + ': *'"
+             formControlName="city"
+             [validate]="true"
+             [required]="true"
+             [dataError]="'registration.mandatory' | translate"
+             pattern="^(?!\s*$|\s).*$"
+             [placeholder]="'registration.city' | translate"
+             type="text">
+    </mz-input-container>
+
+    <mz-input-container class="left-field">
+      <input mz-input
+             [label]="('registration.address' | translate) + ': *'"
+             formControlName="address"
+             [validate]="true"
+             [required]="true"
+             [dataError]="'registration.mandatory' | translate"
+             pattern="^(?!\s*$|\s).*$"
+             [placeholder]="'registration.addressLabel' | translate"
+             type="text">
+    </mz-input-container>
+
+    <mz-input-container class="right-filed">
+      <input mz-input
+             [label]="('registration.postcode' | translate) + ': *'"
+             formControlName="postcode"
+             [validate]="true"
+             [required]="true"
+             [dataError]="'registration.mandatory' | translate"
+             pattern="^(?!\s*$|\s).*$"
+             [placeholder]="'registration.postcode' | translate"
+             type="text">
+    </mz-input-container>
+
+    <mz-datepicker-container class="left-field" style="width: 43%;">
+      <input mz-input
+             [label]="('registration.birthdate' | translate) + ': *'"
+             formControlName="birthdate"
+             [validate]="true"
+             [required]="true"
+             [dataError]="'registration.mandatory' | translate"
+             [placeholder]="'registration.birthdate' | translate"
+             type="date">
+      <i mz-icon-mdi mz-input-prefix
+         [icon]="'calendar'">
+      </i>
+    </mz-datepicker-container>
+
+    <mz-input-container class="right-filed">
+      <input mz-input
+             [label]="'registration.telNumber' | translate"
+             formControlName="telNumber"
+             [validate]="false"
+             [required]="false"
+             [placeholder]="'registration.telNumberLabel' | translate"
+             type="text">
+    </mz-input-container>
+
+    <mz-input-container class="left-field">
+      <input mz-input
+             [label]="('registration.email' | translate) + ': *'"
+             formControlName="email"
+             [validate]="true"
+             [dataError]="'registration.emailError' | translate"
+             [required]="true"
+             email="true"
+             [placeholder]="'registration.emailLabel' | translate"
+             id="valid-input"
+             type="email">
+    </mz-input-container>
+
+    <mz-input-container class="right-filed">
+      <input mz-input
+             [label]="'registration.note' | translate"
+             formControlName="note"
+             [validate]="false"
+             [required]="false"
+             [placeholder]="'registration.note' | translate"
+             type="text">
+    </mz-input-container>
+
+    <mz-input-container class="left-field">
+      <input mz-input
+             [label]="('registration.password' | translate) + ': *'"
+             formControlName="password"
+             [validate]="true"
+             [dataError]="'registration.passwordError' | translate"
+             [required]="true"
+             id="password-input"
+             [placeholder]="'registration.password' | translate"
+             [pattern]="passwordPattern"
+             type="password">
+
+    </mz-input-container>
+
+    <mz-input-container class="right-filed">
+      <input mz-input mz-validation
+             [label]="('registration.confirmPassword' | translate) + ': *'"
+             formControlName="confirmPassword"
+             [validate]="true"
+             [dataError]="'registration.confirmPasswordError' | translate"
+             [required]="true"
+             [pattern]="registrationForm.controls['password'].value"
+             id="confirmPassword"
+             [placeholder]="'registration.password' | translate"
+             type="password">
+    </mz-input-container>
+
+    <div class="empty-line-field"></div>
+    <re-captcha formControlName="captcha" siteKey="{{siteKey}}" required="true" class="full-line-field"></re-captcha>
+
+    <mz-checkbox-container class="full-line-field">
+      <input mz-checkbox
+             formControlName="agree"
+             [label]="''"
+             [filledIn]="true"
+             [required]="true"
+             id="basic-checbox"
+             type="checkbox">
+      <a href="#" style="vertical-align: top">{{'registration.agreement' | translate}}</a>
+    </mz-checkbox-container>
+
+    <button mz-button [disabled]="!registrationForm.valid">
+      {{'registration.button' | translate}}
+    </button>
+
+  </form>
+
+</div>

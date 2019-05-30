@@ -42,7 +42,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { TranslatorModule } from 'angular-translator';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ClipboardModule } from 'ngx-clipboard';
 
 
@@ -93,7 +93,9 @@ import { PeriodicalFiltersComponent } from './periodical/periodical-filters/peri
 
 import { NgxGalleryModule } from 'ngx-gallery';
 import { DialogMetadataComponent } from './dialog/dialog-metadata/dialog-metadata.component';
-import { MzButtonModule, MzInputModule, MzModalModule, MzNavbarModule, MzIconModule, MzIconMdiModule, MzTooltipModule, MzSidenavModule, MzSpinnerModule, MzBadgeModule, MzTabModule, MzCollapsibleModule, MzCollectionModule, MzCardModule, MzDropdownModule, MzCheckboxModule, MzDatepickerModule, MzToastModule } from 'ngx-materialize';
+import {MzButtonModule, MzInputModule, MzModalModule, MzNavbarModule, MzIconModule, MzIconMdiModule, MzTooltipModule, MzSidenavModule,
+  MzSpinnerModule, MzBadgeModule, MzTabModule, MzCollapsibleModule, MzCollectionModule, MzCardModule, MzDropdownModule, MzCheckboxModule,
+  MzDatepickerModule, MzToastModule, MzValidationModule} from 'ngx-materialize';
 import { DialogAuthosComponent } from './dialog/dialog-authors/dialog-authors.component';
 import { CollectionsComponent } from './collections/collections.component';
 import { CollectionComponent } from './collections/collection/collection.component';
@@ -119,6 +121,9 @@ import {OwlModule} from 'ngx-owl-carousel';
 import { OwlCarouselComponent } from './home/owl-carousel/owl-carousel.component';
 import { HomeNavbarComponent } from './home/home-navbar/home-navbar.component';
 import {NgxYoutubePlayerModule} from 'ngx-youtube-player';
+import { RegistrationComponent } from './registration/registration.component';
+import {RecaptchaModule} from 'ng-recaptcha';
+import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 
 @NgModule({
   declarations: [
@@ -194,7 +199,8 @@ import {NgxYoutubePlayerModule} from 'ngx-youtube-player';
     AboutComponent,
     HomeFooterComponent,
     OwlCarouselComponent,
-    HomeNavbarComponent
+    HomeNavbarComponent,
+    RegistrationComponent
   ],
   entryComponents: [
     DialogOcrComponent,
@@ -239,7 +245,12 @@ import {NgxYoutubePlayerModule} from 'ngx-youtube-player';
     MzCheckboxModule,
     MzDatepickerModule,
     ClipboardModule,
-    NgxYoutubePlayerModule.forRoot()
+    NgxYoutubePlayerModule.forRoot(),
+    RecaptchaModule,
+    RecaptchaFormsModule,
+    MzValidationModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     AppState,

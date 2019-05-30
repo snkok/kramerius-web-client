@@ -34,7 +34,8 @@
     "back": "Back for previous page",
     "home": "Home page",
     "checkbox_label": "only public",
-    "main_navigation": "Main navigation"
+    "main_navigation": "Main navigation",
+    "registration": "Registration"
   },
   "searchbar": {
     "library": "Search in digital library ...",
@@ -1270,5 +1271,32 @@
     "wit" : "Witness",
     "wpr" : "Writer of preface",
     "wst" : "Writer of supplementary textual content"
+  },
+  "registration":{
+    "title": "SNK reader's registration",
+    "name": "Name",
+    "email": "Email address",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "emailLabel": "Please enter your email address",
+    "nameError": "Name cannot be empty",
+    "emailError": "Invalid email address",
+    "passwordError": "Must contain number and letter. Minimum is 6 characters.",
+    "confirmPasswordError": "The password is not the same",
+    "button": "Registration",
+    "titleLabel": "Title",
+    "surname": "Surname",
+    "address": "Address",
+    "addressLabel": "Street",
+    "postcode": "Postcode",
+    "city": "City",
+    "telNumber": "Contact",
+    "telNumberLabel": "Telephone number",
+    "birthdate": "Date of Birth",
+    "note": "Note",
+    "mandatory": "This field is mandatory.",
+    "agreement": "Agreement to personal data processing",
+    "failure": "Registration failed.",
+    "success": "Registration successfully completed."
   }
 }
