@@ -113,13 +113,13 @@
       "doctypes": "Vyhľadať typ dokumentu",
       "authors": "Vyhľadať autora",
       "collections": "Vyhľadať zbierku",
-      "keywords": "Vyhľadať kľúčové slovo", 
+      "keywords": "Vyhľadať kľúčové slovo",
       "languages": "Vyhľadať jazyk",
       "locations": "Vyhľadať lokalitu",
       "geonames": "Vyhľadať Geografický názov"
     },
     "ordering": {
-      "label": "Zoradenie",      
+      "label": "Zoradenie",
       "occurrence": "Podľa výskytov",
       "alphabetical": "Abecedne"
     },
@@ -168,7 +168,9 @@
     "content": "Obsah",
     "extent": "Rozsah",
     "physical_description": "Fyzický popis",
-    "doctype": "Typ dokumentu",        
+    "cartographic_data": "Kartografické údaje",
+    "scale": "Mierka",
+    "doctype": "Typ dokumentu",
     "notes": "Poznámky",
     "genres": "Žáner",
     "article": "Článok",
@@ -178,17 +180,18 @@
     "issue": "Číslo",
     "unit": "Časť",
     "page": "Strana",
+    "supplement": "Príloha",
     "volume_list": "Prejsť na periodikum",
-    "previous_volume": "Predchádzajúci ročník",   
+    "previous_volume": "Predchádzajúci ročník",
     "next_volume": "Nasledujúci ročník",
     "issue_date": "Dátum vydania",
-    "previous_issue": "Predchádzajúce číslo",   
+    "previous_issue": "Predchádzajúce číslo",
     "issue_list": "Prejsť na ročník",
     "next_issue": "Nasledujúce číslo",
     "unit_number": "Číslo",
     "unit_list": "Prejsť na zväzok kníh",
     "next_unit": "Nasledujúca časť:",
-    "previous_unit": "Predchádzajúca časť:",   
+    "previous_unit": "Predchádzajúca časť:",
     "shelf_locator": "Signatúra: {{shelf_locator}}",
     "btn_show_metadata": "Zobraziť metadáta",
     "btn_hide_metadata": "Skryť metadáta",
@@ -213,7 +216,7 @@
     "year_unknown": "-",
     "unit_title_unknown": "-",
     "unit_number_unknown": "-",
-    "previous_volume": "Predchádzajúci ročník",   
+    "previous_volume": "Predchádzajúci ročník",
     "next_volume": "Nasledujúci ročník",
     "volume_list": "Zoznam ročníkov"
   },
@@ -261,7 +264,7 @@
   "pdf-dialog": {
     "title_generate": "Príprava na stiahnutie",
     "title_prepare": "Príprava na tlač",
-    "message_generate": "Vyberte stránky pre výsledný PDF dokument.",    
+    "message_generate": "Vyberte stránky pre výsledný PDF dokument.",
     "message_prepare": "Vyberte stránky na tlač.",
     "page_from": "Od stránky",
     "page_to": "Po stránku",
@@ -273,6 +276,9 @@
     "action_generate": "Stiahnuť PDF",
     "action_prepare": "Pripraviť na tlač"
   },
+  "metadata-dialog": {
+    "title": "Metadáta pre"
+  },
   "citation-dialog": {
     "title": "Citácia",
     "level-0": "celého dokumentu",
@@ -283,6 +289,11 @@
   },
   "share-dialog": {
     "title": "Zdieľať dokument",
+    "level-0": "dokument",
+    "level-1": "ročník",
+    "level-2": "výtlačok",
+    "level-3": "článok",
+    "level-4": "vybranú stranu",
     "link": "Odkaz na zdieľanie",
     "social": "Zdieľať na sociálnych sieťach"
   },

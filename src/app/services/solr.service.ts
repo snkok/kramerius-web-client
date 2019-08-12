@@ -200,8 +200,6 @@ export class SolrService {
                 item.hits = doclist['numFound'];
             } else {
                 item.doctype = dp;
-                params['fulltext'] = query.getRawQ();    // TODO (pz) SNKOK-143  bod 1.
-                item.hits = doclist['numFound'];         // TODO (pz) SNKOK-143  bod 1.
             }
             if (item.title === 'null') {
                 item.title = '-';

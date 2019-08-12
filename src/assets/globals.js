@@ -19,6 +19,7 @@ var APP_GLOBAL = {
       title: 'Slovenská národná knižnica',
       code: 'snk',
       logo: 'http://www.snk.sk/images/websnk-vlavo-180x115.png',
+      url: 'http://localhost:8080',
       richCollections: true,
       joinedDoctypes: true,
       lemmatization: false,

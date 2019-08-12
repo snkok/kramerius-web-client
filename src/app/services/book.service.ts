@@ -1055,7 +1055,7 @@ export class BookService {
         if (rightPage && rightPage.imageType === PageImageType.ZOOMIFY) {
             zRequests.push(this.krameriusApiService.getZoomifyProperties(rightPage.url));
         }
-        forkJoin(zRequests).subscribe(zResult => {
+        forkJoin(zRequests).subscribe((zResult: string[]) => {
             leftPage.assignZoomifyData(zResult[0]);
             if (rightPage && zResult.length >= 2) {
                 rightPage.assignZoomifyData(zResult[1]);

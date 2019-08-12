@@ -182,14 +182,11 @@ export class KrameriusApiService {
     }
 
     getRecommended() {
-        // const url = this.getApiUrl() + '/feed/custom';        //TODO (pz) Po IXPO dat naspat!
-        const url = this.getApiUrl() + '/search?fl=PID,dostupnost,dc.creator,dc.title,datum_str,fedora.model,img_full_mime&q=PID:uuid\\:85729863-78cc-4f0f-8ad2-3875d7043667';
-        return this.doGet(url)
-            // .map(response => this.utils.parseRecommended(response))     //TODO (pz) Po IXPO dat naspat!
-            .map(response => this.solrService.documentItems(response))
-            .catch(this.handleError);
+      const url = this.getApiUrl() + '/feed/custom';
+      return this.doGet(url)
+        .map(response => this.utils.parseRecommended(response))
+        .catch(this.handleError);
     }
-
     getCollections() {
         const url = this.getApiUrl() + '/vc';
         return this.doGet(url)
@@ -254,7 +251,7 @@ export class KrameriusApiService {
         const text = query.fulltext.toLowerCase().trim()
                         .replace(/"/g, '\\"').replace(/~/g, '\\~')
                         .replace(/:/g, '\\:').replace(/-/g, '\\-').replace(/\[/g, '\\[').replace(/\]/g, '\\]').replace(/!/g, '\\!');
-        url += ' AND (fedora.model:monographunit || fedora.model:page) AND text:' + text;    // TODO (pz) Dokoncit!
+        url += ' AND (fedora.model:article || fedora.model:monographunit || fedora.model:page) AND text:' + text;
         if (query.ordering === 'latest') {
             url += '&sort=datum desc, datum_str desc';
         } else if (query.ordering === 'earliest') {
