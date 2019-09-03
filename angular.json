@@ -34,11 +34,11 @@
             ]
           },
           "configurations": {
-            "dev": {
+            "tempest-dev": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.dev.ts"
+                  "with": "src/environments/environment.tempest-dev.ts"
                 }
               ]
             },
