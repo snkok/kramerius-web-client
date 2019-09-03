@@ -34,11 +34,11 @@ export class CollectionService {
                 const collection = new Collection();
                 collection.pid = col.pid;
                 if (col.descs) {
-                    collection.titleCs = col.descs.cs;
+                    collection.titleSk = col.descs.sk;
                     collection.titleEn = col.descs.en;
                 }
                 if (col.longDescs) {
-                    collection.descriptionCs = col.longDescs.cs;
+                    collection.descriptionCs = col.longDescs.sk;
                     collection.descriptionEn = col.longDescs.en;
                 }
                 if (col.numberOfDocs) {
@@ -61,8 +61,8 @@ export class CollectionService {
             return;
         }
         for (const col of this.collections) {
-            if (this.translator.language === 'cs') {
-                col.title = col.titleCs;
+            if (this.translator.language === 'sk') {
+                col.title = col.titleSk;
                 col.description = col.descriptionCs;
             } else {
                 col.title = col.titleEn;

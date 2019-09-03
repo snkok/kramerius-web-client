@@ -2,7 +2,7 @@
 export class Collection {
   pid: string;
   title: string;
-  titleCs: string;
+  titleSk: string;
   titleEn: string;
   description: string;
   descriptionCs: string;
