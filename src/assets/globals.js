@@ -1,6 +1,6 @@
 var APP_GLOBAL = {
 //  share_url: "http://localhost:4200/${KRAMERIUS}/uuid/${UUID}",
-  share_url: "https://onlinekniznica.snk.sk/uuid/${UUID}",
+  share_url: "http://onk.snk.tempest.test/uuid/${UUID}",
   ga: 'UA-11111111-14',
   enablePeriodicalVolumesYearsLayout: true,
   enablePeriodicalIsssuesCalendarLayout: true,
@@ -19,7 +19,7 @@ var APP_GLOBAL = {
       title: 'Slovenská národná knižnica',
       code: 'snk',
       logo: 'http://www.snk.sk/images/websnk-vlavo-180x115.png',
-      url: 'http://localhost:8080',
+      url: 'http://onk.snk.tempest.test',
       richCollections: true,
       joinedDoctypes: true,
       lemmatization: false,
