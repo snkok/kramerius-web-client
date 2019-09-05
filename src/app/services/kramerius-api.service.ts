@@ -32,6 +32,9 @@ export class KrameriusApiService {
         private solrService: SolrService) {
     }
 
+    /**
+     * BE URL sa ziskava cez proxy nastavenie - subor proxy.conf.json
+     */
     private getbaseUrl(): string {
         return this.appSettings.url;
     }
