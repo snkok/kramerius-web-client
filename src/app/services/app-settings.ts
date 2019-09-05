@@ -81,7 +81,7 @@ export class AppSettings {
     this.collectionsService.clear();
     this.code = kramerius.code;
     this.title = kramerius.title;
-    this.url = environment.url;
+    this.url = kramerius.url;
     this.logo = kramerius.logo;
     this.logoHome = kramerius.logoHome || this.logo;
     this.richCollections = kramerius.richCollections;
