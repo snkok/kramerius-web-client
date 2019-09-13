@@ -1,7 +1,8 @@
 var APP_GLOBAL = {
 //  share_url: "http://localhost:4200/${KRAMERIUS}/uuid/${UUID}",
   share_url: "http://onk.snk.tempest.test/uuid/${UUID}",
-  ga: 'UA-11111111-14',
+  //ga: 'UA-11111111-14',
+  ga: '',
   enablePeriodicalVolumesYearsLayout: true,
   enablePeriodicalIsssuesCalendarLayout: true,
   defaultPeriodicalVolumesLayout: "years", // grid | years

@@ -55,7 +55,10 @@
       a.src = g;
       m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'gaaa');
+
+    if(APP_GLOBAL.ga && 0 < APP_GLOBAL.ga.length) {
         gaaa('create', APP_GLOBAL.ga, 'auto');
+    }
     </script>
 
 </body>
