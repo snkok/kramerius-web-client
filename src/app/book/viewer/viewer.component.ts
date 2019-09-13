@@ -328,23 +328,23 @@ export class ViewerComponent implements OnInit, OnDestroy {
       tierSizeCalculation: 'truncated',
       imageExtent: extent,
     });
-    const imageSource = new ol.source.ImageStatic({
+    /*const imageSource = new ol.source.ImageStatic({        // TODO (pz) [SNKKB-74]
       url: url + 'TileGroup0/0-0-0.jpg',
       imageExtent: extent
     });
     const iLayer = new ol.layer.Image({
       source: imageSource
-    });
+    });*/
     const zLayer = new ol.layer.Tile({
       source: zoomifySource
     });
-    this.view.addLayer(iLayer);
+    // this.view.addLayer(iLayer);   // TODO (pz) [SNKKB-74]
     this.view.addLayer(zLayer);
     if (type === 2) {
-      this.imageLayer2 = iLayer;
+      // this.imageLayer2 = iLayer;  // TODO (pz) [SNKKB-74]
       this.zoomifyLayer2 = zLayer;
     } else {
-      this.imageLayer = iLayer;
+      // this.imageLayer = iLayer;   // TODO (pz) [SNKKB-74]
       this.zoomifyLayer = zLayer;
     }
   }
