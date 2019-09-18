@@ -40,11 +40,11 @@ export class KrameriusApiService {
     }
 
     private getApiUrl(): string {
-        return this.getbaseUrl() + '/search/api/v5.0';
+        return this.getbaseUrl() + '/catalogue';
     }
 
     private getApiUrlForKramerius(url: string): string {
-        return url + '/search/api/v5.0';
+        return url + '/catalogue';
     }
 
 
@@ -338,7 +338,7 @@ export class KrameriusApiService {
     }
 
     getScaledJpegUrl(uuid: string, height: number): string {
-        let url = this.getbaseUrl() + '/search/img?pid=' + uuid + '&stream=IMG_FULL';
+        let url = this.getbaseUrl() + '/catalogue/img?pid=' + uuid + '&stream=IMG_FULL';
         if (height) {
             url += '&action=SCALE&scaledHeight=' + height;
         }
@@ -346,7 +346,7 @@ export class KrameriusApiService {
     }
 
     getLocalPrintUrl(uuids: string[]) {
-        return this.getbaseUrl() + '/search/localPrintPDF'
+        return this.getbaseUrl() + '/catalogue/localPrintPDF'
             + '?pids=' + uuids.join(',')
             + '&pagesize=A4&imgop=FULL';
     }
