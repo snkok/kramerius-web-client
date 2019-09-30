@@ -120,7 +120,6 @@ import { KrameriusInfoService } from './services/kramerius-info.service';
 import {OwlModule} from 'ngx-owl-carousel';
 import { OwlCarouselComponent } from './home/owl-carousel/owl-carousel.component';
 import { HomeNavbarComponent } from './home/home-navbar/home-navbar.component';
-import {NgxYoutubePlayerModule} from 'ngx-youtube-player';
 import { RegistrationComponent } from './registration/registration.component';
 import {RecaptchaModule} from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
