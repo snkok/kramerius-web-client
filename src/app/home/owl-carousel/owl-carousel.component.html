@@ -1,36 +1,35 @@
 <owl-carousel #owlElement [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'sliding', 'owl-carousel']">
-  <div class="item" style="position: relative;
-                              padding-bottom: 56.25%; /* 16:9 */
-                              height: 0;">
-    <div style="position: relative;
-                              padding-bottom: 56.25%; /* 16:9 */
-                              height: 0;">
-      <youtube-player
-        [videoId]="video1Id"
-        [width]="videoWidth"
-        [height]="videoHeight"
-        (ready)="savePlayer1($event)"
-        (change)="onVideo1StateChange($event)">
-      </youtube-player>
+
+<!--  <div class="item">
+    <div style="position:relative;height:0;padding-bottom:56.28%">
+      <iframe id="player1" src="https://www.youtube.com/embed/ee6whfngY4E?enablejsapi=1" style="position:absolute;width:100%;height:100%;left:0"
+              width="1155" height="603" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
   </div>
-  <div class="item" style="position: relative;
-                              padding-bottom: 56.25%; /* 16:9 */
-                              height: 0;">
-    <div style="position: relative;
-                              padding-bottom: 56.25%; /* 16:9 */
-                              height: 0;">
-      <youtube-player
-        [videoId]="video2Id"
-        [width]="videoWidth"
-        [height]="videoHeight"
-        (ready)="savePlayer2($event)"
-        (change)="onVideo2StateChange($event)">
-      </youtube-player>
+
+  <div class="item">
+    <div style="position:relative;height:0;padding-bottom:56.28%">
+      <iframe id="player2" src="https://www.youtube.com/embed/o0k5WOsRd4Y?enablejsapi=1" style="position:absolute;width:100%;height:100%;left:0"
+              width="1155" height="650" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>-->
+
+  <div class="item">
+    <div style="position:relative;height:0;padding-bottom:56.28%">
+      <div id="player1" style="position:absolute;width:100%;height:100%;left:0" height="603">
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div style="position:relative;height:0;padding-bottom:56.28%">
+      <div id="player2" style="position:absolute;width:100%;height:100%;left:0" height="650">
+      </div>
     </div>
   </div>
 
   <div class="item" *ngFor="let image of images;let i= index">
-    <img class="slide-image" src="{{image.image}}" width="100%">
+    <img class="slide-image" src="{{image.image}}" width="100%" alt="Národný projekt: Digitálna knižnica a digitálny archív">
   </div>
+
 </owl-carousel>
