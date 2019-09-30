@@ -244,7 +244,6 @@ import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
     MzCheckboxModule,
     MzDatepickerModule,
     ClipboardModule,
-    NgxYoutubePlayerModule.forRoot(),
     RecaptchaModule,
     RecaptchaFormsModule,
     MzValidationModule,
