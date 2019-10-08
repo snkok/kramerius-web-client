@@ -23,7 +23,7 @@ export class HomeFooterComponent implements OnInit {
     this.translator.languageChanged.subscribe(() => {
       this.localeChanged();
     });
-    const reqCs = this.http.get(this.appSettings.footer['cs'], { observe: 'response', responseType: 'text' })
+    const reqCs = this.http.get(this.appSettings.footer['sk'], { observe: 'response', responseType: 'text' })
     .map(response => response['body']);
     const reqEn = this.http.get(this.appSettings.footer['en'], { observe: 'response', responseType: 'text' })
     .map(response => response['body']);
@@ -38,7 +38,7 @@ export class HomeFooterComponent implements OnInit {
   }
 
   private localeChanged() {
-    if (this.translator.language === 'cs') {
+    if (this.translator.language === 'sk') {
       this.data = this.dataCs;
     } else {
       this.data = this.dataEn;

@@ -14,8 +14,8 @@ import { DatepickerComponent } from './datepicker.component';
     NgSlimScrollModule,
     RouterModule,
     TranslatorModule.forRoot({
-      providedLanguages: ['en', 'cs'],
-      defaultLanguage: 'cs'
+      providedLanguages: ['en', 'sk'],
+      defaultLanguage: 'sk'
     })
   ],
   exports: [ DatepickerComponent, CommonModule, FormsModule, NgSlimScrollModule ]

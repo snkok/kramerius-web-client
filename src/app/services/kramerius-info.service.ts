@@ -25,9 +25,13 @@ export class KrameriusInfoService {
     }
 
     reload() {
-        this.api.getKrameriusInfo(this.translator.language).subscribe(
+      const info = new KrameriusInfo();
+      info.pdfMaxRange = 100;
+      this.dataSubject.next(info);
+
+        /*this.api.getKrameriusInfo(this.translator.language).subscribe(
             info => this.dataSubject.next(info)
-        );
+        );*/
     }
 
 }
