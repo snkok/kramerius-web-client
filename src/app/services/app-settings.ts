@@ -1,4 +1,3 @@
-import { KrameriusInfoService } from './kramerius-info.service';
 import { CollectionService } from './collection.service';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
@@ -28,6 +27,7 @@ export class AppSettings {
   public lemmatization: boolean;
   public iiifEnabled: boolean;
   public k3: string;
+  public pdfGenerationMaxPages: number;
 
   public share_url = APP_GLOBAL.share_url;
   public enablePeriodicalVolumesYearsLayout = APP_GLOBAL.enablePeriodicalVolumesYearsLayout;
@@ -93,6 +93,7 @@ export class AppSettings {
     this.k3 = kramerius.k3;
     this.customRightMessage = kramerius.customRightMessage;
     this.currentCode = this.code;
+    this.pdfGenerationMaxPages = kramerius.pdfGenerationMaxPages;
     // this.krameriusInfoService.reload();
     this.listner.next(kramerius);
   }
@@ -145,4 +146,5 @@ interface KrameriusData {
   iiif: boolean;
   k3: string;
   customRightMessage: boolean;
+  pdfGenerationMaxPages: number;
 }

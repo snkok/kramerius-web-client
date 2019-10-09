@@ -7,7 +7,6 @@ import { Subscription } from 'rxjs/Subscription';
 import { interval } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
 import { KrameriusApiService } from '../../services/kramerius-api.service';
-import { KrameriusInfoService } from '../../services/kramerius-info.service';
 
 declare var ol: any;
 
@@ -68,7 +67,6 @@ export class ViewerComponent implements OnInit, OnDestroy {
   constructor(public bookService: BookService,
               public authService: AuthService,
               public appSettings: AppSettings,
-              public krameriusInfo: KrameriusInfoService,
               public controlsService: ViewerControlsService) {
     this.viewerActionsSubscription = this.controlsService.viewerActions().subscribe((action: ViewerActions) => {
         this.onActionPerformed(action);
