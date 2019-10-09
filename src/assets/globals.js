@@ -19,13 +19,14 @@ var APP_GLOBAL = {
     {
       title: 'Slovenská národná knižnica',
       code: 'snk',
-      logo: 'http://www.snk.sk/images/websnk-vlavo-180x115.png',
-      url: 'http://localhost:8080',
+      logo: '',
+      url: '',
       richCollections: true,
       joinedDoctypes: true,
       lemmatization: false,
+      pdfGenerationMaxPages: 100,
       iiif: true,
-      doctypes: ['monograph', 'periodical', 'map', 'graphic', 'archive', 'manuscript', /*'soundrecording', */ 'sheetmusic'],
+      doctypes: ['monograph', 'periodical', 'map', 'graphic', /*'archive',*/ 'manuscript', /*'soundrecording', */ 'sheetmusic'],
       filters: ['accessibility', 'doctypes', 'authors', 'keywords', 'geonames', 'collections', 'locations', 'languages']
     }
   ]

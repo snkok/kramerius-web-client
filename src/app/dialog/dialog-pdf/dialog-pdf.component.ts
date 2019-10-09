@@ -1,9 +1,9 @@
-import { KrameriusApiService } from './../../services/kramerius-api.service';
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { MzBaseModal, MzModalComponent } from 'ngx-materialize';
-import { saveAs } from 'file-saver';
-import { Translator } from 'angular-translator';
-import { KrameriusInfoService } from '../../services/kramerius-info.service';
+import {KrameriusApiService} from './../../services/kramerius-api.service';
+import {Component, OnInit, Input, ViewChild} from '@angular/core';
+import {MzBaseModal, MzModalComponent} from 'ngx-materialize';
+import {saveAs} from 'file-saver';
+import {Translator} from 'angular-translator';
+import {AppSettings} from '../../services/app-settings';
 
 @Component({
   selector: 'app-dialog-pdf',
@@ -28,7 +28,7 @@ export class DialogPdfComponent extends MzBaseModal implements OnInit {
   downloadError: boolean;
 
 
-  constructor(private krameriusApi: KrameriusApiService, private krameriusInfo: KrameriusInfoService, private translator: Translator) {
+  constructor(private krameriusApi: KrameriusApiService, private appSettings: AppSettings, private translator: Translator) {
     super();
   }
 
@@ -41,20 +41,8 @@ export class DialogPdfComponent extends MzBaseModal implements OnInit {
     if (this.doublePage) {
       this.pageTo += 1;
     }
-    const subscription = this.krameriusInfo.data$.subscribe(
-      info => {
-        console.log('info', info);
-        this.maxPageCount = info.pdfMaxRange;
-        this.inProgress = false;
-        subscription.unsubscribe();
-      },
-      error => {
-        console.log('error while getting info');
-        this.maxPageCount = 30;
-        this.inProgress = false;
-        subscription.unsubscribe();
-      }
-    );
+    this.maxPageCount = this.appSettings.pdfGenerationMaxPages;
+    this.inProgress = false;
   }
 
   onFromValueChanged() {
