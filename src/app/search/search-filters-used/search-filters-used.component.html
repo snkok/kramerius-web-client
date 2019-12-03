@@ -20,11 +20,19 @@
     </span>
   </mz-collection-item>
 
-  <mz-collection-item *ngIf="searchService.query.accessibility === 'private'">
+  <mz-collection-item *ngIf="searchService.query.accessibility === 'only_in_library'">
     <span (click)="searchService.removeAccessibilityFilter()" class="app-cursor-pointer" mz-tooltip [tooltip]="'filters.tooltip_remove_filter' | translate" [position]="'top'">
       <i mz-icon-mdi [icon]="'lock'" [class]="'app-clean-mg'"></i>
       <i mz-icon-mdi [icon]="'close'" [class]="'app-clean-mg'"></i>
-      {{ 'search.accessibility.private' | translate }}
+      {{ 'search.accessibility.only_in_library' | translate }}
+    </span>
+  </mz-collection-item>
+
+  <mz-collection-item *ngIf="searchService.query.accessibility === 'paying_users'">
+    <span (click)="searchService.removeAccessibilityFilter()" class="app-cursor-pointer" mz-tooltip [tooltip]="'filters.tooltip_remove_filter' | translate" [position]="'top'">
+      <i mz-icon-mdi [icon]="'lock'" [class]="'app-clean-mg'"></i>
+      <i mz-icon-mdi [icon]="'close'" [class]="'app-clean-mg'"></i>
+      {{ 'search.accessibility.paying_users' | translate }}
     </span>
   </mz-collection-item>
 

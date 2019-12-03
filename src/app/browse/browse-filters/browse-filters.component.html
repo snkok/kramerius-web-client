@@ -6,7 +6,7 @@
   <mz-collapsible [mode]="'expandable'" *ngIf="accessibilityEnabled">
       <mz-collapsible-item [active]="collapsedFilter">
         <mz-collapsible-item-header>
-          {{ 'search.accessibility.label' | translate }}   
+          {{ 'search.accessibility.label' | translate }}
           <i mz-icon-mdi [icon]="'chevron-down'" [class]="'app-clean-mg'"></i>
           <i mz-icon-mdi [icon]="'chevron-left'" [class]="'app-clean-mg'"></i>
         </mz-collapsible-item-header>
@@ -19,8 +19,13 @@
               </span>
             </mz-collection-item>
             <mz-collection-item>
-              <span class="app-row" [class.selected]="browseService.query.accessibility == 'private'">
-                <a (click)="browseService.setAccessibility('private');analytics.sendEvent('browse', 'accessibility', 'private');">{{'search.accessibility.private' | translate }}</a>
+              <span class="app-row" [class.selected]="browseService.query.accessibility == 'only_in_library'">
+                <a (click)="browseService.setAccessibility('only_in_library');analytics.sendEvent('browse', 'accessibility', 'only_in_library');">{{'search.accessibility.only_in_library' | translate }}</a>
+              </span>
+            </mz-collection-item>
+            <mz-collection-item>
+              <span class="app-row" [class.selected]="browseService.query.accessibility == 'paying_users'">
+                <a (click)="browseService.setAccessibility('paying_users');analytics.sendEvent('browse', 'accessibility', 'paying_users');">{{'search.accessibility.paying_users' | translate }}</a>
               </span>
             </mz-collection-item>
             <mz-collection-item>
@@ -32,13 +37,13 @@
         </mz-collection>
         </mz-collapsible-item-body>
       </mz-collapsible-item>
-    </mz-collapsible> 
+    </mz-collapsible>
 
 
   <mz-collapsible [mode]="'expandable'">
     <mz-collapsible-item [active]="collapsedFilter">
       <mz-collapsible-item-header>
-        {{ 'browse.category.label' | translate }}   
+        {{ 'browse.category.label' | translate }}
         <i mz-icon-mdi [icon]="'chevron-down'" [class]="'app-clean-mg'"></i>
         <i mz-icon-mdi [icon]="'chevron-left'" [class]="'app-clean-mg'"></i>
       </mz-collapsible-item-header>
@@ -54,6 +59,6 @@
       </mz-collection>
       </mz-collapsible-item-body>
     </mz-collapsible-item>
-  </mz-collapsible> 
+  </mz-collapsible>
 
 </div>

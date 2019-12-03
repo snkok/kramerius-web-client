@@ -73,10 +73,12 @@ export class SearchQuery {
 
 
     public setAccessibility(accessibility: string) {
-        if (accessibility === 'private') {
-            this.accessibility = 'private';
-        } else if (accessibility === 'public') {
+        if (accessibility === 'public') {
             this.accessibility = 'public';
+        } else if (accessibility === 'only_in_library') {
+            this.accessibility = 'only_in_library';
+        } else if (accessibility === 'paying_users') {
+            this.accessibility = 'paying_users';
         } else {
             this.accessibility = 'all';
         }
@@ -189,8 +191,10 @@ export class SearchQuery {
         if (facet !== 'accessibility' && this.availableFilters.indexOf('accessibility') > -1) {
             if (this.accessibility === 'public') {
                 q += ' AND dostupnost:public';
-            } else if (this.accessibility === 'private') {
-                q += ' AND dostupnost:private';
+            } else if (this.accessibility === 'only_in_library') {
+                q += ' AND dostupnost:only_in_library';
+            } else if (this.accessibility === 'paying_users') {
+                q += ' AND dostupnost:paying_users';
             } else if (!facet) {
                 // q += ' AND (dostupnost:public^999 OR dostupnost:private)';
             }
@@ -257,7 +261,7 @@ export class SearchQuery {
         if (this.page && this.page > 1) {
             params['page'] = this.page;
         }
-        if (this.accessibility === 'public' || this.accessibility === 'private') {
+        if (this.accessibility === 'public' || this.accessibility === 'only_in_library' || this.accessibility === 'paying_users') {
             params['accessibility'] = this.accessibility;
         }
         if (this.query) {
