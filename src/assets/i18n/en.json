@@ -140,6 +140,7 @@
     "warning": "Attention",
     "error": "Error",
     "no_results_found": "No results found. Please, try a different query.",
+    "no_collections": "No collections of works were created yet.",
     "inaccessible_document": "The document is not publicly accessible",
     "inaccessible_document_description": "Tento dokument je stále chráněn Autorským zákonem (č. 121/2000 Sb.) a není ho tedy možné veřejně zpřístupnit, dokud neuplyne 70 let od smrti všech jeho autorů (včetně překladatele, ilustrátora atd.) a 50 let od vydání díla. K dokumentu lze získat přístup z počítačových stanic v budově knihovny, která jej vlastní. Informaci o vlastnictví požadovaného dokument zjistíte v podrobnostech vpravo jako „Místo uložení“.",
     "inaccessible_document_dnnt": "The document is not publicly accessible",
