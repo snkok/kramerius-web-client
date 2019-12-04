@@ -19,7 +19,9 @@ export class CitationService {
     if (!metadata) {
       return null;
     }
-    const link = !!uuid ? this.shareService.getPersistentLink(uuid) : this.shareService.getPersistentLinkByUrl();
+    const link = !!uuid
+      ? this.shareService.getPersistentLink(uuid, (metadata.doctype === 'periodical' && (level === CitationService.LEVEL_DOCUMENT || level === CitationService.LEVEL_VOLUME)) ? 'periodical' : 'view')
+      : this.shareService.getPersistentLinkByUrl();
     let c = '';
     if (metadata.doctype !== 'periodical') {
       c += this.writeAuthors(metadata);
