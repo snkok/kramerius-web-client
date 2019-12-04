@@ -114,7 +114,7 @@ export class BookService {
     init(params: BookParams) {
         this.clear();
         this.uuid = params.uuid;
-        this.fulltextQuery = params.fulltext;
+        this.fulltextQuery = params.fulltext == null ? params.fulltext : params.fulltext.replace(/\*/g, '');
         this.bookState = BookState.Loading;
         this.iiifEnabled =  this.appSettings.iiifEnabled;
         this.krameriusApiService.getItem(params.uuid).subscribe((item: DocumentItem) => {
