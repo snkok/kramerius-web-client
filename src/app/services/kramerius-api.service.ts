@@ -209,7 +209,7 @@ export class KrameriusApiService {
         const modelRestriction = models.map(a => 'fedora.model:' + a).join(' OR ');
         let url = this.getApiUrl() + '/search?fl=PID,dostupnost,fedora.model,dc.title,datum_str,details&q=pid_path:'
                 + pidPath.toLowerCase() + '/* AND level:' + level + ' AND (' + modelRestriction + ')';
-        if (query && (query.accessibility === 'private' || query.accessibility === 'public')) {
+        if (query && (query.accessibility === 'only_in_library' || query.accessibility === 'public' || query.accessibility === 'paying_users')) {
             url += ' AND dostupnost:' + query.accessibility;
         }
         if (query && applyYear && query.isYearRangeSet()) {
@@ -245,7 +245,7 @@ export class KrameriusApiService {
         } else {
             url += 'root_pid:"' + periodicalUuid + '"';
         }
-        if (query.accessibility === 'public' || query.accessibility === 'private') {
+        if (query.accessibility === 'public' || query.accessibility === 'only_in_library' || query.accessibility === 'paying_users') {
             url += ' AND dostupnost:' + query.accessibility;
         }
         if (query.isYearRangeSet()) {

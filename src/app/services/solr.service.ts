@@ -279,19 +279,23 @@ export class SolrService {
     facetAccessibilityList(solr) {
         const list = [];
         let allDocs = 0;
-        let privateDocs = 0;
+        let libraryDocs = 0;
+        let payingDocs = 0;
         let publicDocs = 0;
         const facetFields = solr['facet_counts']['facet_fields']['dostupnost'];
         for (let i = 0; i < facetFields.length; i += 2) {
             if (facetFields[i] === 'public') {
                 publicDocs = facetFields[i + 1];
-            } else if (facetFields[i] === 'private') {
-                privateDocs = facetFields[i + 1];
+            } else if (facetFields[i] === 'only_in_library') {
+              libraryDocs = facetFields[i + 1];
+            } else if (facetFields[i] === 'paying_users') {
+              payingDocs = facetFields[i + 1];
             }
             allDocs += facetFields[i + 1];
         }
         list.push({'value' : 'public', 'count': publicDocs});
-        list.push({'value' : 'private', 'count': privateDocs});
+        list.push({'value' : 'only_in_library', 'count': libraryDocs});
+        list.push({'value' : 'paying_users', 'count': payingDocs});
         list.push({'value' : 'all', 'count': allDocs});
         return list;
     }

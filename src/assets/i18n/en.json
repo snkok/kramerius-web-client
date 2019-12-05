@@ -2,7 +2,7 @@
   "common": {
     "of": "of",
     "cancel": "Cancel",
-    "close": "Close",    
+    "close": "Close",
     "warning": "Warning",
     "of_pages": "pages",
     "n_pages": "{{ count == 1 ? 'page' : 'pages' }}",
@@ -64,13 +64,13 @@
     "k3": "Search in the old digitization",
     "results": "Results",
     "keywords": "Keyword",
-    "doctypes": "Document Type",   
-    "collections": "Collection", 
+    "doctypes": "Document Type",
+    "collections": "Collection",
     "languages": "Language",
     "locations": "Location",
     "geonames": "Geographic name",
     "authors": "Author",
-    "inaccessible_document": "The document is not publicly accessible",    
+    "inaccessible_document": "The document is not publicly accessible",
     "ordering": {
       "label": "Ordering",
       "relevance": "Relevance",
@@ -81,8 +81,9 @@
     },
     "accessibility": {
       "label": "Accessibility",
-      "public": "Public",
-      "private": "Private",
+      "public": "public",
+      "only_in_library": "accessible only in library",
+      "paying_users": "for paying users",
       "all": "All"
     },
     "datepicker": {
@@ -112,13 +113,13 @@
       "doctypes": "Lookup Document type",
       "authors": "Lookup Author",
       "collections": "Lookup Collection",
-      "keywords": "Lookup Keyword", 
+      "keywords": "Lookup Keyword",
       "languages": "Lookup Language",
       "locations": "Lookup Location",
       "geonames": "Lookup Geographic name"
     },
     "ordering": {
-      "label": "Ordering",      
+      "label": "Ordering",
       "occurrence": "Occurrence",
       "alphabetical": "Alphabetical"
     },
@@ -151,7 +152,7 @@
     "btn_enter": "Enter",
     "btn_search": "Search",
     "tab_visited": "Visited",
-    "tab_recommended": "Recommended",        
+    "tab_recommended": "Recommended",
     "tab_requested": "The most requested",
     "tab_latest": "Latest",
     "select_library": "Select Library"
@@ -160,7 +161,7 @@
     "author": "Author",
     "publisher": "Publishing details",
     "keywords": "Keywords",
-    "languages": "Language",        
+    "languages": "Language",
     "geonames": "Geographic names",
     "location": "Location",
     "abstract": "Abstract",
@@ -169,9 +170,9 @@
     "physical_description": "Physical Description",
     "cartographic_data": "Cartographic data",
     "scale": "Scale",
-    "doctype": "Document type",    
+    "doctype": "Document type",
     "notes": "Notes",
-    "genres": "Genre", 
+    "genres": "Genre",
     "article": "Article",
     "review_of": "Review of",
     "volume": "Volume",
@@ -181,16 +182,16 @@
     "page": "Page",
     "supplement": "Supplement",
     "volume_list": "Volume list",
-    "previous_volume": "Previous volume",   
+    "previous_volume": "Previous volume",
     "next_volume": "Next volume",
     "issue_date": "Date of publication",
-    "previous_issue": "Previous issue",   
+    "previous_issue": "Previous issue",
     "issue_list": "Issue list",
-    "next_issue": "Next issue",  
+    "next_issue": "Next issue",
     "unit_number": "Number",
     "unit_list": "Part list",
     "next_unit": "Next part:",
-    "previous_unit": "Previous part:",       
+    "previous_unit": "Previous part:",
     "shelf_locator": "Shelf/Call number: {{shelf_locator}}",
     "btn_show_metadata": "Show metadata",
     "btn_hide_metadata": "Hide metadata",
@@ -215,7 +216,7 @@
     "year_unknown": "-",
     "unit_title_unknown": "-",
     "unit_number_unknown": "-",
-    "previous_volume": "Previous Volume",   
+    "previous_volume": "Previous Volume",
     "next_volume": "Next Volume",
     "volume_list": "Volume list"
   },
@@ -252,7 +253,7 @@
     "tooltip_metadata": "Metadata",
     "tooltip_citation": "Citation",
     "all_pages": "All Pages"
-   
+
   },
   "book_toolbar": {
     "tooltip_show_metadata": "Show metadata",
@@ -268,7 +269,7 @@
   "pdf-dialog": {
     "title_generate": "Prepare to download",
     "title_prepare": "Prepare to print",
-    "message_generate": "Select page range for the PDF document.",    
+    "message_generate": "Select page range for the PDF document.",
     "message_prepare": "Select page range for printing.",
     "page_from": "From",
     "page_to": "To",

@@ -20,7 +20,7 @@ var APP_GLOBAL = {
       title: 'Slovenská národná knižnica',
       code: 'snk',
       logo: '',
-      url: '',
+      url: 'http://localhost:8080/',
       richCollections: true,
       joinedDoctypes: true,
       lemmatization: false,

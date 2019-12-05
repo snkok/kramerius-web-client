@@ -83,7 +83,8 @@
     "accessibility": {
       "label": "Dostupnosť",
       "public": "iba verejné",
-      "private": "iba neverejné",
+      "only_in_library": "dostupné iba v knižnici",
+      "paying_users": "pre platiacich užívateľov",
       "all": "Všetko"
     },
     "datepicker": {
