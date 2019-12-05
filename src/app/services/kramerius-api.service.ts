@@ -177,7 +177,7 @@ export class KrameriusApiService {
             + uuid + '"'
             + ' AND fedora.model:page'
             + ' AND text:'
-            + text
+            + '*' + text + '*'
             + '&rows=200';
         return this.doGet(url)
             .map(response => this.solrService.uuidList(response))
@@ -254,7 +254,7 @@ export class KrameriusApiService {
         const text = query.fulltext.toLowerCase().trim()
                         .replace(/"/g, '\\"').replace(/~/g, '\\~')
                         .replace(/:/g, '\\:').replace(/-/g, '\\-').replace(/\[/g, '\\[').replace(/\]/g, '\\]').replace(/!/g, '\\!');
-        url += ' AND (fedora.model:article || fedora.model:monographunit || fedora.model:page) AND text:' + text;
+        url += ' AND (fedora.model:article || fedora.model:monographunit || fedora.model:page) AND text:*' + text + '*';
         if (query.ordering === 'latest') {
             url += '&sort=datum desc, datum_str desc';
         } else if (query.ordering === 'earliest') {

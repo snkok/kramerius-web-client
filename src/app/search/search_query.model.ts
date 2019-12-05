@@ -211,7 +211,7 @@ export class SearchQuery {
             // q += '&defType=edismax'
             //    + '&qf=dc.title^10 dc.creator^2 keywords text^0.1'
             //    + '&bq=(level:0)^10&bq=(dostupnost:public)^2'
-            q += '&q1=' + qString
+            q += '&q1=' + '*' + qString + '*'
                + '&fl=PID,dostupnost,model_path,dc.creator,root_title,root_pid,dc.title,datum_str,img_full_mime,score'
                + '&group=true&group.field=root_pid&group.ngroups=true&group.sort=score desc';
             // if (environment.solr.facetTruncate) {
