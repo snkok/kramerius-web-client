@@ -45,10 +45,12 @@ export class PeriodicalQuery {
 
     public setAccessibility(accessibility: string) {
         this.page = 1;
-        if (accessibility === 'private') {
-            this.accessibility = 'private';
-        } else if (accessibility === 'public') {
+        if (accessibility === 'public') {
             this.accessibility = 'public';
+        } else if (accessibility === 'only_in_library') {
+            this.accessibility = 'only_in_library';
+        }  else if (accessibility === 'paying_users') {
+            this.accessibility = 'paying_users';
         } else {
             this.accessibility = 'all';
         }
@@ -90,7 +92,7 @@ export class PeriodicalQuery {
             params['from'] = this.from;
             params['to'] = this.to;
         }
-        if (this.accessibility === 'public' || this.accessibility === 'private') {
+        if (this.accessibility === 'public' || this.accessibility === 'only_in_library' || this.accessibility === 'paying_users') {
             params['accessibility'] = this.accessibility;
         }
         if (this.ordering === 'latest' || this.ordering === 'earliest') {

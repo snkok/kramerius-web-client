@@ -47,9 +47,10 @@ export class DialogShareComponent extends MzBaseModal implements OnInit {
       if (this.metadata.modsMap[doctype[0]]) {
         const uuid = this.metadata.modsMap[doctype[0]].uuid;
         if (uuid) {
+          console.log(doctype[0]);
           this.data.push({
             level: doctype[1],
-            link: this.shareService.getPersistentLink(uuid)
+            link: this.shareService.getPersistentLink(uuid, doctype[0])
           });
         }
       }
