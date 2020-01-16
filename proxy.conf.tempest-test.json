@@ -1,0 +1,10 @@
+{
+    "/search": {
+        "target": "https://onk.snk.tempest.test",
+        "secure": false
+    },
+    "/catalogue": {
+        "target": "https://onk.snk.tempest.test",
+        "secure": false
+    }
+}
