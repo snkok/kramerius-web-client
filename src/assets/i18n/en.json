@@ -35,7 +35,9 @@
     "home": "Home page",
     "checkbox_label": "only public",
     "main_navigation": "Main navigation",
-    "registration": "Registration"
+    "registration": "Registration",
+    "login" : "Login",
+    "logout" : "Logout"
   },
   "searchbar": {
     "library": "Search in digital library ...",

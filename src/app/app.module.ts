@@ -122,6 +122,10 @@ import { HomeNavbarComponent } from './home/home-navbar/home-navbar.component';
 import { RegistrationComponent } from './registration/registration.component';
 import {RecaptchaModule} from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
+import {AppConfigurationService} from "./services/app-configuration.service";
+import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
+
+const keycloakService = new KeycloakService();
 
 @NgModule({
   declarations: [
@@ -201,6 +205,7 @@ import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
     RegistrationComponent
   ],
   entryComponents: [
+    AppComponent,
     DialogOcrComponent,
     DialogPdfComponent,
     DialogShareComponent,
@@ -247,7 +252,8 @@ import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
     RecaptchaFormsModule,
     MzValidationModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    KeycloakAngularModule
   ],
   providers: [
     AppState,
@@ -275,10 +281,32 @@ import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
     CitationService,
     ShareService,
     AnalyticsService,
-    // { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: CachingInterceptor, multi: true }
-  ],
-  bootstrap: [AppComponent]
+    { provide: HTTP_INTERCEPTORS, useClass: CachingInterceptor, multi: true },
+    {
+      provide: KeycloakService,
+      useValue: keycloakService
+    }
+  ]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(private appConfigService: AppConfigurationService) {
+  }
+
+  ngDoBootstrap(app) {
+
+    this.appConfigService.getAuthConfig().subscribe(value => {
+
+      this.appConfigService.keycloakConfiguration = {clientId: 'kramerius-web-client', realm: value.realm, url: value.url};
+      this.appConfigService.authEnabled = value.enabled;
+
+      keycloakService
+          .init({config: this.appConfigService.keycloakConfiguration, enableBearerInterceptor: this.appConfigService.authEnabled})
+          .then(() => {
+            app.bootstrap(AppComponent);
+          })
+          .catch(error => console.error('[ngDoBootstrap] init Keycloak failed', error));
+    })
+  }
+}
 

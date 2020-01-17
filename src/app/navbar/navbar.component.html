@@ -21,12 +21,12 @@
       </mz-navbar-item>
 
 
-      <ng-container *ngIf="appSettings.dnntEnabled">
+      <ng-container>
         <mz-navbar-item *ngIf="authService.isLoggedIn()">
-          <a (click)="logout()">Odhlásit</a>
+          <a (click)="logout()">{{'navbar.logout' | translate}}</a>
         </mz-navbar-item>
         <mz-navbar-item *ngIf="!authService.isLoggedIn()">
-          <a [routerLink]="appSettings.getRouteFor('login')">Přihlásit</a>
+          <a [routerLink]="appSettings.getRouteFor('login')">{{'navbar.login' | translate}}</a>
         </mz-navbar-item>
       </ng-container>
       

@@ -35,7 +35,9 @@
     "home": "Domovská stránka",
     "checkbox_label": "iba verejné",
     "main_navigation": "Hlavné menu",
-    "registration": "Registrácia"
+    "registration": "Registrácia",
+    "login" : "Prihlásiť",
+    "logout" : "Odhlásiť"
   },
   "searchbar": {
     "library": "Hľadať v digitálnej knižnici ...",

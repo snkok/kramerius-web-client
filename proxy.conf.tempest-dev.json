@@ -1,9 +1,13 @@
 {
-    "/search": {
+    "/public/": {
+        "target": "https://onkdata.snk.tempest.test",
+        "secure" : false
+    },
+    "/search/": {
         "target": "https://onk.snk.tempest.test",
         "secure": false
     },
-    "/catalogue": {
+    "/catalogue/": {
         "target": "https://onk.snk.tempest.test",
         "secure": false
     }
