@@ -14,6 +14,7 @@ import { RoutingPrefixGuardService } from './guards/routing-prefix.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import {RegistrationComponent} from "./registration/registration.component";
+import {AuthorizationGuard} from "./services/authorization-guard.service";
 
 const ROUTES: Routes = [
     { path: '404', component: NotFoundComponent},
@@ -27,8 +28,8 @@ const ROUTES: Routes = [
     { path: 'periodical/:uuid', component: PeriodicalComponent, data: { reuse: true }, canActivate: [ RoutingGuardService ] },
     { path: 'music/:uuid', component: MusicComponent, canActivate: [ RoutingGuardService ] },
     { path: 'uuid/:uuid', component: PersistentLinkComponent, canActivate: [ RoutingGuardService ] },
-    { path: 'view/:uuid', component: BookComponent, canActivate: [ RoutingGuardService ] },
-    { path: 'view', component: BookComponent, canActivate: [ RoutingGuardService ] },
+    { path: 'view/:uuid', component: BookComponent, canActivate: [ RoutingGuardService, AuthorizationGuard ] },
+    { path: 'view', component: BookComponent, canActivate: [ RoutingGuardService, AuthorizationGuard ] },
     { path: ':k/about', component: AboutComponent, canActivate: [ RoutingPrefixGuardService ] },
     { path: ':k/login', component: LoginComponent, canActivate: [ RoutingPrefixGuardService ] },
     { path: ':k/browse', component: BrowseComponent, canActivate: [ RoutingPrefixGuardService ] },
@@ -37,8 +38,8 @@ const ROUTES: Routes = [
     { path: ':k/periodical/:uuid', component: PeriodicalComponent, data: { reuse: true }, canActivate: [ RoutingPrefixGuardService ] },
     { path: ':k/music/:uuid', component: MusicComponent, canActivate: [ RoutingPrefixGuardService ] },
     { path: ':k/uuid/:uuid', component: PersistentLinkComponent, canActivate: [ RoutingPrefixGuardService ] },
-    { path: ':k/view/:uuid', component: BookComponent, canActivate: [ RoutingPrefixGuardService ] },
-    { path: ':k/view', component: BookComponent, canActivate: [ RoutingPrefixGuardService ] },
+    { path: ':k/view/:uuid', component: BookComponent, canActivate: [ RoutingPrefixGuardService, AuthorizationGuard ] },
+    { path: ':k/view', component: BookComponent, canActivate: [ RoutingPrefixGuardService, AuthorizationGuard ] },
     { path: ':k', component: HomeComponent, canActivate: [ RoutingPrefixGuardService ] },
     { path: ':k/', component: HomeComponent, canActivate: [ RoutingPrefixGuardService ] },
     { path: '**', component: NotFoundComponent},
