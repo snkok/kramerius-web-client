@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 import { Translator } from 'angular-translator';
 import { AppState } from '../app.state';
 import { HistoryService } from '../services/history.service';
+import {KeycloakService} from "keycloak-angular";
+import {KeycloakProfile} from "keycloak-js";
 
 @Component({
   selector: 'app-navbar',
@@ -16,6 +18,7 @@ export class NavbarComponent implements OnInit {
 
   mobileSearchBarExpanded = false;
   richCollections = false;
+  profile: KeycloakProfile;
 
   constructor(
     public translator: Translator,
@@ -25,10 +28,18 @@ export class NavbarComponent implements OnInit {
     private history: HistoryService,
     public service: LibrarySearchService,
     public analytics: AnalyticsService,
-    public state: AppState) {
+    public state: AppState,
+    public keycloakService: KeycloakService) {
   }
 
   ngOnInit() {
+    this.keycloakService.isLoggedIn().then(value => {
+      if (value) {
+        this.keycloakService.loadUserProfile().then(profile => {
+          this.profile = profile;
+        })
+      }
+    })
   }
 
   onLanguageChanged(lang: string) {
@@ -49,9 +60,12 @@ export class NavbarComponent implements OnInit {
 
   logout() {
     this.analytics.sendEvent('navbar', 'logout');
-    this.authService.logout().subscribe(() => {
-      this.router.navigate(['/']);
+    this.router.navigateByUrl("/").then(value => {
+      this.keycloakService.logout().then(value1 => {
+        this.profile = null;
+      });
     });
+
   }
 
 }

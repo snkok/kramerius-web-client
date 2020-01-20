@@ -296,7 +296,7 @@ export class AppModule {
   ngDoBootstrap(app) {
 
     this.appConfigService.getAuthConfig().subscribe(value => {
-
+      this.appConfigService.authConfiguration = value;
       this.appConfigService.keycloakConfiguration = {clientId: 'kramerius-web-client', realm: value.realm, url: value.url};
       this.appConfigService.authEnabled = value.enabled;
 

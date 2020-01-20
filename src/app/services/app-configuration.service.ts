@@ -15,6 +15,7 @@ export class AppConfigurationService {
 
     keycloakConfiguration: KeycloakConfig;
     authEnabled:boolean = true;
+    authConfiguration:AuthConfiguration;
 
     constructor(private http: HttpClient) {}
 
