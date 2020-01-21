@@ -4,7 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Translator } from 'angular-translator';
 import { AppSettings } from '../services/app-settings';
 import { Router } from '@angular/router';
-import {versionInfo} from "../version-info";
+import {feVersionInfo} from "../fe-version-info";
+import {AppConfigurationService} from "../services/app-configuration.service";
 
 @Component({
   selector: 'app-about',
@@ -19,9 +20,12 @@ export class AboutComponent implements OnInit {
   dataEn = '';
   dataSk = '';
   loading: boolean;
-  versionInfo;
+  environment;
+  gitFeVersion;
+  gitBeVersion;
 
-  constructor(private http: HttpClient, private translator: Translator, private appSettings: AppSettings, private router: Router) {
+  constructor(private http: HttpClient, private translator: Translator, private appSettings: AppSettings, private router: Router,
+              private appConfigurationService: AppConfigurationService) {
     if (!appSettings.aboutPage) {
       this.router.navigate([this.appSettings.getRouteFor('')]);
     }
@@ -47,7 +51,11 @@ export class AboutComponent implements OnInit {
     error => {
       this.loading = false;
     });
-    this.versionInfo = versionInfo;
+    this.appConfigurationService.getRuntimInfo().subscribe(value => {
+      this.environment = value.env;
+      this.gitFeVersion = feVersionInfo.hash;
+      this.gitBeVersion = value.version;
+    })
   }
 
  /* private localeChanged() {

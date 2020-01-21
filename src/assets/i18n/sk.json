@@ -14,7 +14,8 @@
     "copy_to_clipboard": "Skopírovať do schránky",
     "copied_to_clipboard": "Skopírované do schránky",
     "num_of_docs": "{{ count == 1 ? 'titul' : count < 5 ? 'tituly' : 'titulov' }}",
-    "app_version" : "Verzia aplikácie"
+    "app_version" : "Verzia aplikácie",
+    "environment" : "Prostredie"
   },
   "page-not-found": {
     "title": "Stránka nebola nájdená",
