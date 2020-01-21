@@ -3,6 +3,10 @@
   <div class="app-page-content">
 <!--    <h1>{{ 'navbar.about' | translate }}</h1>-->
     <div [innerHTML]="data"></div>
+
+    <div style="font-size: 0.9em; color:#aaa; margin-top: 30px">
+        {{'common.app_version' | translate}}:&nbsp;{{versionInfo.hash}}
+    </div>
   </div>
   
   <mz-spinner *ngIf="loading"
@@ -10,5 +14,6 @@
         [color]="'blue'"
         [size]="'medium'">
   </mz-spinner>
-  
+
+
 </div>

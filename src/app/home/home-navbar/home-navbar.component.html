@@ -19,7 +19,7 @@
       <mz-navbar-item *ngIf="!profile">
         <a (click)="keycloakService.login()">{{'navbar.login' | translate}}</a>
       </mz-navbar-item>
-      <mz-navbar-item *ngIf="profile" class="app-profile">
+      <mz-navbar-item *ngIf="profile" class="app-profile" style="cursor: pointer;">
 
         <div class="app-profile-txt"
              id="btn-dropdown-profile">{{ profile.firstName + ' '+ profile.lastName}}</div>
