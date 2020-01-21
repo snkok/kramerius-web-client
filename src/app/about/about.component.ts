@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Translator } from 'angular-translator';
 import { AppSettings } from '../services/app-settings';
 import { Router } from '@angular/router';
+import {versionInfo} from "../version-info";
 
 @Component({
   selector: 'app-about',
@@ -11,11 +12,14 @@ import { Router } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
 
+
+
   data = '';
   dataCs = '';
   dataEn = '';
   dataSk = '';
   loading: boolean;
+  versionInfo;
 
   constructor(private http: HttpClient, private translator: Translator, private appSettings: AppSettings, private router: Router) {
     if (!appSettings.aboutPage) {
@@ -43,6 +47,7 @@ export class AboutComponent implements OnInit {
     error => {
       this.loading = false;
     });
+    this.versionInfo = versionInfo;
   }
 
  /* private localeChanged() {
