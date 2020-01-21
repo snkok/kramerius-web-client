@@ -5,7 +5,9 @@
     <div [innerHTML]="data"></div>
 
     <div style="font-size: 0.9em; color:#aaa; margin-top: 30px">
-        {{'common.app_version' | translate}}:&nbsp;{{versionInfo.hash}}
+        <b>{{'common.environment' | translate}}:</b>&nbsp;{{environment}} <br/>
+        <b>frontend verzia:</b>&nbsp;{{gitFeVersion}} <br/>
+        <b>backend verzia:</b>&nbsp;{{gitBeVersion}} <br/>
     </div>
   </div>
   

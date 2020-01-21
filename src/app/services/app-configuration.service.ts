@@ -3,6 +3,7 @@ import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {KeycloakConfig} from "keycloak-angular";
 import {AuthConfiguration} from "../model/auth-configuration";
+import {RuntimeInfo} from "../model/runtime-info";
 
 
 /**
@@ -23,6 +24,11 @@ export class AppConfigurationService {
         //todo (gt) - ked bude prenasadeny BE, treba tuto linku zmenit na ../client-auth-config, vid krameriusbackend.controler.AppConfigurationController
         const url = '/public/app-configuration-controller/auth-config';
         return this.http.get<AuthConfiguration>(url);
+    }
+
+    getRuntimInfo(): Observable<RuntimeInfo> {
+        const url = '/public/app-configuration-controller/runtime-info';
+        return this.http.get<RuntimeInfo>(url);
     }
 
 }

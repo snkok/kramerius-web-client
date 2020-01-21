@@ -1,4 +1,4 @@
-export const versionInfo = (() => {
+export const feVersionInfo = (() => {
     try {
         // tslint:disable-next-line:no-var-requires
         return require('../../git-version.json');
