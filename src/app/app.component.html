@@ -7,5 +7,6 @@
   </div>
   <app-navbar *ngIf="!state.atHome()"></app-navbar>
   <app-home-navbar *ngIf="state.atHome()"></app-home-navbar>
+  <app-runtime-info-overlay></app-runtime-info-overlay>
   <router-outlet></router-outlet>
 </main>
