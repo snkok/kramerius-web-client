@@ -1,0 +1,8 @@
+<div class="overlay" *ngIf="visible" (click)="close()">
+    env:&nbsp;
+    <span style="color:red;font-weight: bold">{{runtimeInfo.env}}</span>&nbsp;&nbsp;
+    be:&nbsp;
+    <span style="color:red;font-weight: bold">{{runtimeInfo.version}}</span>
+    fe:
+    <span style="color:red;font-weight: bold">{{feVersion.hash}}</span>
+</div>

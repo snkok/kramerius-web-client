@@ -124,11 +124,13 @@ import {RecaptchaModule} from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 import {AppConfigurationService} from "./services/app-configuration.service";
 import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
+import {RuntimeInfoOverlayComponent} from "./runtime-info-overlay/runtime-info-overlay.component";
 
 const keycloakService = new KeycloakService();
 
 @NgModule({
   declarations: [
+    RuntimeInfoOverlayComponent,
     AppComponent,
     NavbarComponent,
     ViewerComponent,
