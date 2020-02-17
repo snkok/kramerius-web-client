@@ -1,0 +1,17 @@
+{
+    "/public/": {
+        "target": "https://onk.snk.sk",
+        "secure" : false,
+        "logLevel": "debug"
+    },
+    "/catalogue/": {
+        "target": "https://onk.snk.sk",
+        "secure": false,
+        "logLevel": "debug"
+    },
+    "/search/": {
+        "target": "https://onk.snk.sk",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
