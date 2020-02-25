@@ -1,16 +1,16 @@
 {
     "/public/": {
-        "target": "https://onkdata.snk.tempest.test",
+        "target": "https://onk.snk.sk",
         "secure" : false,
         "logLevel": "debug"
     },
-    "/search/": {
-        "target": "https://onk.snk.tempest.test",
+    "/catalogue/": {
+        "target": "https://onk.snk.sk",
         "secure": false,
         "logLevel": "debug"
     },
-    "/catalogue/": {
-        "target": "https://onk.snk.tempest.test",
+    "/search/": {
+        "target": "https://onk.snk.sk",
         "secure": false,
         "logLevel": "debug"
     }
