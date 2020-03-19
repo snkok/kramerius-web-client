@@ -130,7 +130,7 @@ app-home-navbar {
   }
 
   nav ul {
-    a {
+    a,span {
       color: white;
     }
 
@@ -139,4 +139,7 @@ app-home-navbar {
     }
   }
 
+  #nav-mobile{
+    background: black;
+  }
 }
