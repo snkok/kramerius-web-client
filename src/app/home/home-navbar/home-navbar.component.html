@@ -22,7 +22,8 @@
       <mz-navbar-item *ngIf="profile" class="app-profile" style="cursor: pointer;">
 
         <div class="app-profile-txt"
-             id="btn-dropdown-profile">{{ profile.firstName + ' '+ profile.lastName}}</div>
+             id="btn-dropdown-profile"
+             style="padding: 0 15px;"><span>{{ profile.firstName + ' '+ profile.lastName}}</span></div>
 
         <mz-dropdown
                 [id]="'dropdown-profile'"
