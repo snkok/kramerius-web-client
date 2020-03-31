@@ -21,7 +21,7 @@
             <plugin>
                 <groupId>com.github.eirslett</groupId>
                 <artifactId>frontend-maven-plugin</artifactId>
-                <version>1.7.6</version>
+                <version>1.9.0</version>
 
                 <configuration>
                     <nodeVersion>v10.16.3</nodeVersion>
@@ -44,13 +44,13 @@
                     </execution>
 
                     <execution>
-                        <id>npm run build</id>
+                        <id>npm run-script prod</id>
+                        <phase>prepare-package</phase>
                         <goals>
                             <goal>npm</goal>
                         </goals>
-
                         <configuration>
-                            <arguments>run build</arguments>
+                            <arguments>run-script prod</arguments>
                         </configuration>
                     </execution>
 
