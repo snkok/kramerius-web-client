@@ -9,6 +9,7 @@
     "tempest-dev": "ng serve  --proxyConfig=proxy.conf.tempest-dev.json",
     "snk-test": "ng serve  --proxyConfig=proxy.conf.snk-test.json",
     "snk-prod": "ng serve  --proxyConfig=proxy.conf.snk-prod.json",
+    "prod": "ng build --aot --output-hashing=all",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
