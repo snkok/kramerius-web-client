@@ -38,7 +38,7 @@
     "git-describe": "^4.0.4",
     "http-proxy-middleware": "^0.20.0",
     "jquery": "^3.4.1",
-    "keycloak-angular": "^7.1.0",
+    "keycloak-angular": "^7.2.0",
     "keycloak-js": "^8.0.1",
     "mdi": "^2.2.43",
     "ng-lazyload-image": "^5.1.2",
