@@ -17,6 +17,7 @@ export class BrowseResultsComponent implements OnInit {
   getParams(value: string) {
     const params = {};
     params[this.browseService.query.category] = value;
+    params["accessibility"] = this.browseService.query.accessibility;
     return params;
   }
 

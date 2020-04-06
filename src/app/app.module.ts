@@ -303,7 +303,7 @@ export class AppModule {
       this.appConfigService.authEnabled = value.enabled;
 
       keycloakService
-          .init({config: this.appConfigService.keycloakConfiguration, enableBearerInterceptor: this.appConfigService.authEnabled})
+          .init({initOptions:{onLoad:"check-sso"},config: this.appConfigService.keycloakConfiguration, enableBearerInterceptor: this.appConfigService.authEnabled})
           .then(() => {
             app.bootstrap(AppComponent);
           })
