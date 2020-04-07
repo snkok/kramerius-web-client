@@ -82,8 +82,8 @@
     },
     "accessibility": {
       "label": "Dostupnost",
-      "public": "pouze veřejné",
-      "private": "pouze neveřejné",
+      "public": "Pouze veřejné",
+      "private": "Pouze neveřejné",
       "all": "Vše"
     },
     "datepicker": {

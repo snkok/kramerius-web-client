@@ -84,9 +84,9 @@
     },
     "accessibility": {
       "label": "Accessibility",
-      "public": "public",
-      "only_in_library": "accessible only in library",
-      "paying_users": "for paying users",
+      "public": "Public",
+      "only_in_library": "Accessible only in library",
+      "paying_users": "For paying users",
       "all": "All"
     },
     "datepicker": {

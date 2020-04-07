@@ -86,9 +86,9 @@
     },
     "accessibility": {
       "label": "Dostupnosť",
-      "public": "iba verejné",
-      "only_in_library": "dostupné iba v knižnici",
-      "paying_users": "pre platiacich užívateľov",
+      "public": "Iba verejné",
+      "only_in_library": "Dostupné iba v knižnici",
+      "paying_users": "Pre platiacich užívateľov",
       "all": "Všetko"
     },
     "datepicker": {
