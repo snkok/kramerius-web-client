@@ -80,7 +80,7 @@
       "label": "Zoradenie",
       "relevance": "Podľa Relevancie",
       "alphabetical": "Abecedne",
-      "newest": "Novo pridané",
+      "newest": "Najnovšie",
       "latest": "Od najnovších",
       "earliest": "Od najstarších"
     },
@@ -155,7 +155,7 @@
   },
   "home": {
     "title": "Digitálna knižnica Kramerius",
-    "btn_enter": "Vstúpiť",
+    "btn_enter": "Vyhľadať",
     "btn_search": "Hľadaj",
     "tab_visited": "Navštívené",
     "tab_recommended": "Odporúčané",

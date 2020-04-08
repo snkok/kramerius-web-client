@@ -78,7 +78,7 @@
       "label": "Ordering",
       "relevance": "Relevance",
       "alphabetical": "Alphabetical",
-      "newest": "Recently added",
+      "newest": "Newest",
       "latest": "Newest first",
       "earliest": "Oldest first"
     },
@@ -153,7 +153,7 @@
   },
   "home": {
     "title": "Digital library Kramerius",
-    "btn_enter": "Enter",
+    "btn_enter": "Search",
     "btn_search": "Search",
     "tab_visited": "Visited",
     "tab_recommended": "Recommended",

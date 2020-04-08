@@ -76,7 +76,7 @@
       "label": "Řazení",
       "relevance": "Podle Relevance",
       "alphabetical": "Abecedně",
-      "newest": "Nově přidané",
+      "newest": "Nejnovší",
       "latest": "Od nejnovějších",
       "earliest": "Od nejstarších"
     },
@@ -149,7 +149,7 @@
   },
   "home": {
     "title": "Digitální knihovna Kramerius",
-    "btn_enter": "Vstupte",
+    "btn_enter": "Vyhledat",
     "btn_search": "Hledej",
     "tab_visited": "Navštívené",
     "tab_recommended": "Doporučené",    
