@@ -25,12 +25,12 @@
   "title": {
     "main": "Digitálna knižnica Kramerius",
     "search": "Hľadať",
-    "browse": "Prechádzať",
+    "browse": "Dokumenty",
     "collections": "Zbierky"
   },
   "navbar": {
     "collections": "Zbierky",
-    "browse": "Prechádzať",
+    "browse": "Dokumenty",
     "help": "Pomocník",
     "about": "Informácie",
     "back": "Späť na predchádzajúcu stránku",
@@ -70,7 +70,7 @@
     "keywords": "Kľúčové slovo",
     "doctypes": "Typ dokumentu",
 
-    "collections": "Zbierka",
+    "collections": "Databázy",
     "languages": "Jazyk",
     "locations": "Miesto uloženia",
     "geonames": "Geografický názov",
@@ -105,7 +105,7 @@
   },
   "browse": {
     "category": {
-      "label": "Prechádzať",
+      "label": "Dokumenty",
       "doctypes": "Typy dokumentov",
       "authors": "Autori",
       "collections": "Zbierky",
