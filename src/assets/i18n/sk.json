@@ -101,7 +101,9 @@
       "from": "Od",
       "to": "Do",
       "apply": "Použiť"
-    }
+    },
+    "titles-authors-results" : "Výsledky vyhľadávania medzi názvami a autormi:",
+    "fulltext-results" : "Výsledky vyhľadávania vo full-texte:"
   },
   "browse": {
     "category": {

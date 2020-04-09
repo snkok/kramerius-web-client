@@ -7,8 +7,16 @@
         message="alert.no_results_found">
 </app-alert>
 
+<div class="search-spacer"
+     *ngIf="searchService.results.length>0">{{'search.titles-authors-results' | translate}}</div>
+<app-document-card *ngFor="let item of searchService.getResultsFromTitlesAndAuthors()" [in]="'search'"
+                   [item]="item"></app-document-card>
+<div class="clearfix"></div>
 
-<app-document-card *ngFor="let item of searchService.results" [in]="'search'" [item]="item"></app-document-card>
+<div class="search-spacer" *ngIf="searchService.results.length>0">{{'search.fulltext-results' |
+    translate}}</div>
+<app-document-card *ngFor="let item of searchService.getResultsFromFulltext()" [in]="'search'"
+                   [item]="item"></app-document-card>
 <div class="clearfix"></div>
 
 <app-paginator [activeIndex]="searchService.query.page"

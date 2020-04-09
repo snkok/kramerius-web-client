@@ -99,7 +99,9 @@
       "from": "From",
       "to": "To",
       "apply": "Apply"
-    }
+    },
+    "titles-authors-results" : "Results in titles and authors:",
+    "fulltext-results" : "Results in fulltext:"
   },
   "browse": {
     "category": {

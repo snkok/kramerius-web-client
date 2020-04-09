@@ -270,4 +270,23 @@ export class SearchService {
         this.checkFacet(this.query.collections.length === 0, response, 'collections');
     }
 
+    getResultsFromTitlesAndAuthors(): DocumentItem[] {
+        var results = [];
+        this.results.forEach(value => {
+            if (!value.hits){
+                results.push(value);
+            }
+        })
+        return results;
+    }
+
+    getResultsFromFulltext(): DocumentItem[] {
+        var results = [];
+        this.results.forEach(value => {
+            if (value.hits){
+                results.push(value);
+            }
+        })
+        return results;
+    }
 }

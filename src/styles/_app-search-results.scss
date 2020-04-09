@@ -10,6 +10,10 @@ app-search-results {
   &.app-search-results-no-toolbar {
     height: 100%;
   }
+
+  .search-spacer {
+    padding: 10px;
+  }
   
   app-document-card {
     float: left;
