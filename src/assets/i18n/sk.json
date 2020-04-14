@@ -26,10 +26,10 @@
     "main": "Digitálna knižnica Kramerius",
     "search": "Hľadať",
     "browse": "Dokumenty",
-    "collections": "Zbierky"
+    "collections": "Databázy"
   },
   "navbar": {
-    "collections": "Zbierky",
+    "collections": "Databázy",
     "browse": "Dokumenty",
     "help": "Pomocník",
     "about": "Informácie",
@@ -110,7 +110,7 @@
       "label": "Dokumenty",
       "doctypes": "Typy dokumentov",
       "authors": "Autori",
-      "collections": "Zbierky",
+      "collections": "Databázy",
       "keywords": "Kľúčové slová",
       "languages": "Jazyky",
       "locations": "Lokality",
@@ -119,7 +119,7 @@
     "search": {
       "doctypes": "Vyhľadať typ dokumentu",
       "authors": "Vyhľadať autora",
-      "collections": "Vyhľadať zbierku",
+      "collections": "Vyhľadať databázu",
       "keywords": "Vyhľadať kľúčové slovo",
       "languages": "Vyhľadať jazyk",
       "locations": "Vyhľadať lokalitu",
@@ -147,7 +147,7 @@
     "warning": "Upozornenie",
     "error": "Chyba",
     "no_results_found": "Neboli nájdené žiadne výsledky. Prosím, skúste iné zadanie.",
-    "no_collections": "Doposiaľ neboli vytvorené žiadne zbierky diel.",
+    "no_collections": "Doposiaľ neboli vytvorené žiadne databázy diel.",
     "inaccessible_document": "Tento dokument nie je verejne prístupný",
     "inaccessible_document_description": "Tento dokument je stále chránený autorským zákonom (č. 185/2015 Z.z.) a iné je ho teda možné zverejniť pokiaľ neuplynie 70 rokov od smrti všetkých jeho autorov (vrátane prekladateľa, ilustrátora atď.) a 50 rokov od vydania diela. K dokumentu je možné pristupovať z počítačových staníc v budove knižnice, ktorá ho vlastní. Informáciu o vlastníctve požadovaného dokumentu, zistíte v podrobnostiach vpravo ako „Lokalita“.",
     "inaccessible_document_dnnt": "Tento dokument nie je verejne prístupný",
